@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to PHP and Features of PHP</title>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+    
+    body p { 
+        font-family: 'JetBrains Mono', monospace;
+            background-color: #000000;
+            font-size: 20px;
+            padding: 5px;
+    }
+    
+   
+    body p1 {
+        color: #ffff00;
+        padding: 5px;
+        font-size: 35px;
+        font-family: 'JetBrains Mono', monospace;        
+    }
+    body p2 {
+        color: #0000ff;
+        font-size: 30px;
+        padding: 5px;
+        font-weight: bold;
+        font-family: 'JetBrains Mono', monospace;
+    }
+p3 {
+        color: #ffffff;
+        font-size: 30px;
+        font-family: 'Sans-serif', Verdana;
+    }
+    p4 {
+        color: #ffffff;
+        font-size: 25px;
+        font-family: 'Sans-serif', Verdana;
+    }
+
+ .box {
+    background-color: red;
+    padding: 20px;
+    border: 2px solid #0000ff;
+    border-radius: 30px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 96%;
+}
+    .box h2 {
+        color: #0000ff;
+        font-weight: 900;
+    }
+
+    
+      header {
+            font-family: 'Monospace', Courier;
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+    header h1 {
+        font-family: 'Serif', Times New Roman;
+        font-size: 60px;
+        color: #FFFF00;
+    }  
+    header h2 {
+          font-family: 'JetBrains Mono', monospace;
+        font-size: 40px;
+        color: blue;
+    }
+header p1 {
+           font-family: 'Serif', Times New Roman;
+        font-size: 50px;
+        color: red;
+    }    
+          
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #00ffff;
+        }
+
+        nav a {
+            color: #0000ff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ff0000;
+        }
+
+        section {
+            padding: 20px;
+            background-color: #00ff00;
+            font-color: #ff0000;
+            text-align: center;
+        }
+    p5 {
+        color: #ff0000;
+        font-size: 25px;
+    }
+    P6 {
+        color: #000000;
+        font-size: 25px
+    }
+
+        h5 {
+            color: #ffff00;
+            font-size: 80px;
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+
+        footer {
+            background-color: #575757;
+            padding: 10px;
+            width: 100%;
+            bottom: 0;
+        }
+    footer p {
+        color: #ffff;
+        background-color: #575757;
+        text-align: center;
+    }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+    
+    ul {
+        color: #00ff00;
+    }
+    
+/* Comment Box Styles */
+.comment-box {
+    background-color: #00ffff;
+    padding: 30px;
+    margin: 10px;
+    border-top: 4px solid #0000ff;
+    border-bottom: 4px solid #0000ff;
+    border-right: 4px solid #0000ff;
+    border-left: 4px solid #0000ff;
+}
+
+.comment-box h2 {
+    color: #0000ff;
+    font-size: 35px;
+}
+
+.comment-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-box label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.comment-box input,
+.comment-box textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.comment-box textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.comment-box button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #0fff00;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    border: 5px;;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-box button:hover {
+    background-color: #ff0000;
+}
+    .comments-list {
+            margin-top: 20px;
+        }
+
+        .comment-item {
+            background-color: #e9ecef;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Welcome to nphstudy.com</h1>
+        <h2> This web is develop by</h2>
+        <p1> Deepanshu Ranjan</p1>
+        
+    </header>
+
+    <nav>
+        <a href="file:///storage/emulated/0/Web%20Project/home%20page/home%20pape/Home.html">Home</a>
+        <a href="file:///storage/emulated/0/Web%20Project/About%20us/About.html">About</a>
+        <a href="file:///storage/emulated/0/Web%20Project/Services/Services.html">Services</a>
+        <a href="file:///storage/emulated/0/Web%20Project/Contact/Contact.html">Contact</a>
+      <a href="file:///storage/emulated/0/Web%20Project/About%20Developers/About%20Developers.html">About Developers</a>
+      <a href="#social-media">Social Media</a>
+      
+  
+        
+    </nav><br><br><br>
+    
+    <div class="box">
+        <h2> Click for Read or Scroll &#x1F60A</h2><br>
+        <h3>
+        <a href="#target-section">Introduction to PHP in Hindi</a> <br>  <br> 
+        <a href="#target-section1">How PHP work in Hindi</a><br><br>
+        <a href="#features-of-php">Features of PHP in Hindi</a>
+        </h3>    
+        </div> 
+    <br>
+        <br>
+        <br>
+        
+    
+    <p1 id="target-section">#Introduction to PHP</p1>
+    <ul>
+<li><p>PHP का पूरा नाम Hypertext Preprocessor है। लेकिन इसको Personal Home Page भी कहते है.</p></li>
+<li><p>PHP एक open source तथा server side scripting language है इसको HTML के साथ use में लाया जा सकता है.</p></li>
+<li><p>इस language का इस्तेमाल website और application को बनाने के लिए किया जाता है। इसके साथ-साथ इसका प्रयोग dynamic web page create करने के लिए भी किया जाता है.</p></li>
+<Li><p>इसे वर्ष 1994 में Rasmus Lerdorf के द्वारा develop किया गया था और वर्ष 1995 में launch किया गया था.</p></li>
+<li><p>PHP Language का प्रयोग web development में किया जाता है जिससे कि हम dynamic web page का निर्माण करते है तथा इसके द्वारा database, तथा e-commerce website को create किया जाता है.</p></li>
+<li><p>PHP को हम free में download करके use कर सकते है.</p></li>
+<li><p>PHP एक simple language है और इस language को सीखना काफी आसान है.</p></li>
+<li><p>दूसरी scripting language की तुलना में PHP काफी fast language है। इस language को object-oriented के नाम से भी जाना जाता है। इस language को HTML में जोड़ा जा सकता है.</p></li>
+<li><p>PHP लगभग सभी servers के साथ compatible होती है। अर्थात इसको सभी प्रकार के server के साथ काम में लाया जा सकता है.</p></li>
+<li><p>PHP language को बहुत सारें platform में run कर सकते है जैसे:- Windows, Linux, Unix etc.</p></li>
+<li><p>PHP file के .PHP, .PHP3, या .PHTML extension होते है.</p></li>
+    </ul>
+    
+        <p1 id="target-section1"> # How PHP work</p1>
+        
+    <ul>
+        <li><p>जब कोई user browser में URL डालता है (जैसे `https://example.com/index.php`), तो यह web server को एक HTTP request भेजता है.</p></li>  
+    <li><p>Server request को process करता है और देखता है कि file में `.php` extension है या नहीं.</p></li>
+<li><p>यदि file PHP script वाली होती है, तो server इसे PHP interpreter को भेजता है.</p></li>
+<li><p>PHP interpreter script को process करता है, जिसमें calculation, file access, या database से डेटा प्राप्त करना शामिल हो सकता है.</p></li>
+<li><p>PHP कोड HTML के रूप में output देता है, जिसे browser में भेजने के लिए तैयार किया जाता है.</p></li>
+<li><p>Process की गई HTML webpage के रूप में client (user के browser) को भेजी जाती है.</p></li>
+<li><p>Browser प्राप्त किए गए HTML को display करता है, जिससे user को web page दिखता है. </p></li>
+<li><p>PHP आवश्यकतानुसार MySQL, PostgreSQL, या अन्य database से data प्राप्त करता या store करता है.</p></li>  
+<li><p>PHP script client को नहीं दिखती, सिर्फ उसका output (HTML) ही user को मिलता है, जिससे security बनी रहती है.</p></li>  
+<li><p>PHP session (`$_SESSION`) और cookies (`$_COOKIE`) के माध्यम से user data को track कर सकता है.</p></li>
+<li><p>PHP errors को handle कर सकता है और उन्हें log कर सकता है ताकि user को न दिखे, लेकिन developers इसे debug कर सके. </p></li>  
+<li><p>PHP, HTML, CSS, JavaScript और AJAX के साथ मिलकर काम कर सकता है.</p></li>
+<li><p>PHP के लिए Laravel, CodeIgniter जैसे framework और WordPress, Joomla जैसे CMS उपलब्ध हैं.</p></li>  
+<li><p>PHP in build security features प्रदान करता है, जो SQL injection, XSS, और CSRF attacks को रोकते हैं.</p></li>  
+<li><p>PHP script को web hosting server पर upload किया जाता है, जिसमें PHP और Apache/Nginx जैसे web server install होते हैं.</p></li>  
+<li><p>PHP windows, linux और macOS servers पर चलता है और विभिन्न database और web server के साथ संगत है.</p></li>
+    </ul>
+    
+    <p1 id="features-of-php"># Features of PHP</p1>
+    <ul>
+        <li><p>PHP (Hypertext Preprocessor) एक server-side scripting language है जो web development के लिए उपयोग की जाती है. यह एक powerful language है जिसे dynamic और interactive web page बनाने के लिए design किया गया है. आइए PHP की Main Features (विशेषताओं) को विस्तार से समझते हैं:</p></li>
+    </ul>
+    
+    <p2>1. Open Source & Free </p2>
+    <ul>
+        <li><p>PHP एक open source language है, जिसका अर्थ है कि इसे कोई भी free में download और use कर सकता है. इसके source code को आवश्यकतानुसार change किया जा सकता है. </p></li>
+    </ul>
+    
+    <p2>2. Platform Independent</p2>
+        <ul>
+            <li><p>PHP को Windows, Linux, macOS आदि किसी भी operating system पर चलाया जा सकता है. यह विभिन्न servers जैसे Apache, Nginx, IIS आदि के साथ भी संगत है.</p></li>
+    </ul>
+    
+    <p2>3. Server-Side Scripting </p2>
+        <ul>
+            <li><p>PHP एक server-side scripting language है, जिसका मतलब है कि इसका code server पर run होता है और output HTML के रूप में browser को भेजा जाता है. इससे website अधिक secure और fast बनती है.</p></li>
+        </ul>
+            
+    <p2>4. Dynamic & Interactive Web Pages</p2>
+        <ul>
+            <li><p>PHP का उपयोग करके dynamic web page बनाए जा सकते हैं, जो user input के आधार पर content को बदल सकते हैं. जैसे – login system, form handling, e-commerce website आदि.</p></li>
+    </ul>
+    
+    <p2>5. Easy to Learn & Use</p2>
+        <ul>
+            <li> <p>PHP का syntax बहुत आसान और C, C++ व Java जैसी अन्य languages से मिलता-जुलता है. इसके कारण इसे सीखना और उपयोग करना आसान है.</p></li>
+    </ul>
+    
+    <p2>6. Database Support</p2>
+        <ul>
+            <li><p>PHP विभिन्न database जैसे MySQL, PostgreSQL, Oracle, MongoDB आदि को support करता है, जिससे data को आसानी से store और manage किया जा सकता है.</p></li>
+        </ul>
+    
+    <p2>7. High Performance & Speed</p2>
+        <ul>
+            <li><p>PHP अन्य scripting language की तुलना में fast है, क्योंकि यह server पर कम load डालता है और कम time में output generate करता है.</p></li>
+    </ul>
+    
+    <p2>8. Security Features</p2>
+        <ul>
+            <li><p>PHP में कई security features शामिल हैं, जैसे – SQL Injection, Cross-Site Scripting (XSS), और Cross-Site Request Forgery (CSRF) से security के लिए in built function.</p></li>
+    </ul>
+    
+    <p2>9. Large Community Support</p2>
+        <ul>
+            <li><p>PHP की एक large community है, जिससे कोई भी developer आसानी से सहायता प्राप्त कर सकता है। Online कई forms, tutorials और documentation उपलब्ध हैं.</p></li>
+    </ul>
+    
+    <p2>10. Multiple Framework Support</p2>
+        <ul>
+            <li><p>PHP कई popular framework को support करता है, जैसे – Laravel, CodeIgniter, Symfony, Zend, Yii, CakePHP आदि, जो development को fast और simple बनाते हैं.</p></li>
+    </ul>
+    
+    <p2>11. Object-Oriented Programming - OOPs</p2>
+        <ul>    
+        <li><p>PHP में OOPs features मौजूद हैं, जिससे बड़े और modular projects को आसानी से develop किया जा सकता है.</p></li>
+    </ul>
+    
+    <p2>12. File Handling</p2>
+        <ul>
+            <li><p>PHP में files को read, write, open, close करने और delete करने के लिए कई inbuilt functions होते हैं. यह features वेबसाइट पर file uploading और downloading में मदद करता है.</p></li>
+    </ul>
+    
+    <p2>13. Multi-Threading Support</p2>
+        <ul>    
+        <li><p>PHP एक समय में कई task को संभाल सकता है, जिससे यह high performance web application के लिए उपयुक्त बनता है.</p></li>
+    </ul>
+    
+    <p2>14. Code Reusability</p2>
+        <ul>    
+        <li><p>PHP में code को विभिन्न modules और functions में विभाजित किया जा सकता है, जिससे code को बार-बार उपयोग करना आसान हो जाता है.</p></li>
+        </ul>
+    
+    <p2>15. Web Services & API Integration</p2>
+        <ul>
+        <li><p>PHP RESTful और SOAP web services को support करता है, जिससे अन्य application के साथ आसानी से data का आदान-प्रदान किया जा सकता है.</p></li>      
+        </ul>
+    </ul>
+        <br><br>
+       <section>
+           <p5><b><i> निवेदन:</i></b></p5>
+           <p6> अगर आपको हमारी ये post पसंद आई हो, तो अपने दोस्तों के पास भी share करे और हमे comment करके जरूर बताए और अगर आपको किसी other subject में कोई problem हो तो हमे comment के जरिए बताए, हम आपकी problem को solve करने में मदद करेंगे. Thank you!</p6>
+       </section><br> <br><br>
+     
+<div class="comment-box">
+    <h2><i>Please Write your comment &#128071; </i></h2><br>
+    <form onsubmit="addComment(event)">
+        <label for="name"> Name: </label>
+        <input type="text" id="nameInput" placeholder="Enter Your Name" required><br>
+        <label for="comment"> Comment: </label>
+        <textarea id="commentInput" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Post Comment</button>
+    </form>
+</div>
+
+<section class="comments-list" id="commentsList">
+    <h2>All Comments:</h2>
+</section>
+
+<script>
+    let isAdmin = false; // एडमिन लॉगिन स्टेटस
+
+    function adminLogin() {
+        let password = prompt("Enter Admin Password:");
+        if (password === "shakya80") { 
+            isAdmin = true;
+            document.getElementById("adminStatus").innerText = "Admin Logged In!";
+            displayComments(); // फिर से कमेंट्स दिखाओ ताकि Delete बटन ऐड हो जाए
+        } else {
+            alert("Wrong Password! Try again.");
+        }
+    }
+
+    function addComment(event) {
+        event.preventDefault();
+        let name = document.getElementById("nameInput").value;
+        let comment = document.getElementById("commentInput").value;
+        let timestamp = new Date().toLocaleString();
+
+        let comments = JSON.parse(localStorage.getItem("comments")) || [];
+        comments.push({ name, comment, timestamp });
+        localStorage.setItem("comments", JSON.stringify(comments));
+
+        document.getElementById("nameInput").value = "";
+        document.getElementById("commentInput").value = "";
+
+        displayComments();
+    }
+
+    function displayComments() {
+        let comments = JSON.parse(localStorage.getItem("comments")) || [];
+        let commentsList = document.getElementById("commentsList");
+        commentsList.innerHTML = "<h2>All Comments:</h2>";
+
+        comments.forEach((commentObj, index) => {
+            let div = document.createElement("div");
+            div.classList.add("comment-item");
+            div.innerHTML = `<strong>${commentObj.name}</strong> <br> ${commentObj.comment} <br> <small>${commentObj.timestamp}</small> <br>`;
+
+            // अगर एडमिन लॉग इन है तो Delete बटन दिखाओ
+            if (isAdmin) {
+                div.innerHTML += `<button onclick="deleteComment(${index})">Delete</button>`;
+            }
+
+            commentsList.appendChild(div);
+        });
+    }
+
+    function deleteComment(index) {
+        if (isAdmin) {
+            let comments = JSON.parse(localStorage.getItem("comments")) || [];
+            comments.splice(index, 1);
+            localStorage.setItem("comments", JSON.stringify(comments));
+            displayComments();
+        } else {
+            alert("Only admin can delete comments!");
+        }
+    }
+
+    displayComments(); // पेज लोड होते ही कमेंट्स दिखें
+</script>
+
+<br>
+       <!-- Admin Login -->
+<button onclick="adminLogin()">Admin Login</button>
+<p id="adminStatus" style="color: yellow;"></p>
+  
+    <footer>
+        <p><small>&copy; 2024 Deepanshu Ranjan. All rights reserved.</small></p>
+    </footer>
+</body>
+</html>
