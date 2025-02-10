@@ -34,43 +34,104 @@
             z-index: 1500;
         }
         header h1 {
-            font-size: 40px;
+            font-size: 28px;
             font-family: 'JetBrains Mono', monospace;
             color: #ffff00;   
         }
     
     header h2 {
-        font-size: 35;
+        font-size: 22;
         font-family: 'JetBrains Mono', monospace;
         color: red;
     }
     header h3 {
-        font-size: 25px;
+        font-size: 24px;
         font-family: 'JetBrains Mono', monospace;
         color: #0000ff;
     }
 
         /* Navigation Styling */
-        nav {
+      .menu-container {
+            position: relative;
+            color: #000000;
+            background-color: #0000ff;
+            padding: 10px 20px;
             display: flex;
-            justify-content: center;
-            background-color: #00ffff;
-            padding: 5px 10px;
+            justify-content: space-between;
+            align-items: center;
         }
-        nav a {
-            color: #0000FF;
-            
-            padding: 15px 50px;
-            margin: 5 15px;
+
+        .hamburger-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
             text-decoration: none;
+            color: white;
             font-weight: bold;
-           
+            padding: 10px 15px;
+            transition: 0.3s ease;
         }
-        nav a:hover {
-            background-color: #ff0000;
-            border-radius: 2px;
+
+        .menu a:hover {
+            background-color: #3f3fff;
+            border-radius: 5px;
         }
-    
+
+        @media screen and (max-width: 768px) {
+            .hamburger-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .menu a {
+                display: block;
+                padding: 12px;
+            }
+        }
+
           /* link sction ke liye */
     .link {
             display: flex;
@@ -80,7 +141,7 @@
         }
         .link a {
             color: #0000FF;
-            
+            font-size: 15px;
             padding: 15px 50px;
             margin: 5 15px;
             text-decoration: none;
@@ -96,7 +157,7 @@
             
             background-size: cover;
             background-position: center;
-            height: 400px;
+            height: 350px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -105,7 +166,7 @@
             padding: 200px;
         }
         .hero h2 {
-            font-size: 35px;
+            font-size: 28px;
             margin-bottom: 15px;
         }
         .hero p {
@@ -122,7 +183,7 @@
             text-align: center;
         }
         section h2 {
-            font-size: 2.5rem;
+            font-size: 2.1rem;
             margin-bottom: 20px;
             color: #ffffff;
         }
@@ -141,6 +202,7 @@
         }
         .services h2 {
         color: #0000;
+        font-size: 30px;
         }
         .service-box {
             background-color: #FFFF00;
@@ -166,12 +228,13 @@
         }
         .about h2 {
             margin-bottom: 15px;
+            font-size: 30px;
             color: #0000FF;
         }
         .about p {
             max-width: 800px;
             margin: 0 auto;
-            font-size: 1.1rem;
+            font-size: 20px;
             line-height: 1.6;
         }
   
@@ -179,9 +242,16 @@
         /* Contact Section */
         .contact {
             background-color: #4a90e2;
-            color: #fff;
             padding: 50px 20px;
         }
+    .contact h2 {
+        font-size: 30px;
+        color: #ffff;
+    }
+    .contact h3 {
+        font-size: 20px;
+        color: #ffff00;
+    }
 
         /* Footer Styling */
         footer {
@@ -205,15 +275,19 @@
     </header>
 
     <!-- Navigation Menu -->
-    <nav>
+    <div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+            <ul>
+     
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="file:///storage/emulated/0/My%20First%20Web%20Project/Private%20web%20page/index.html">Private</a>
-        
+            </ul>   
     </nav>
-    
+    </div>
  
     <!-- Hero Section -->
     <div class="hero" id="home">
@@ -228,9 +302,8 @@
          
     <h2> NOTES IN HINDI &#x1F449</h2><br>
         <ul>
-            <li><a href="php_introduction_work_features.html">PHP Notes in Hindi</a></li> <br>
-            <li><a href="introduction_to_android.html">Introduction to android in Hindi</a></li><br>
-            <li> <a href="java.html">Java Notes in Hindi</a></li><br> 
+            <li><a href="file:///storage/emulated/0/Web%20Project/PHP%20Notes%20Link/index.html">PHP Notes in Hindi</a></li> <br>
+            <li> <a href="file:///storage/emulated/0/Web%20Project/Test%20Code/index.html">Java Notes in Hindi</a></li><br> 
             <li> <a href="#javascript">JavaScript Notes in Hindi</a></li><br>
             <li> <a href="#software_engineering">Software Engineering Notes in Hindi</a></li><br>
             <li> <a href="#operating_system">Operating system Notes in Hindi</a></li><br>
@@ -273,10 +346,17 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Contact Us</h2>
-        <h1 style="color:#00ff00">Email: deepanshuranjan8057@gmail.com</h1>
-        <h1 style="color:#00ff00">Whatsapp: +91 8057754706</h1>
+        <h3 style="color:#00ff00">Email: deepanshuranjan8057@gmail.com</h1>
+        <h3 style="color:#00ff00">Whatsapp: +91 8057754706</h1>
     </section>
 
+    <script>
+    function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+}
+
+    </script>
     
     
     <!-- Footer -->
