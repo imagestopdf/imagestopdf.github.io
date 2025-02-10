@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to PHP and Features of PHP</title>
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #000000;
+            margin-left: 5px;
+            padding: 0;
+        }
+    
+    body p { 
+        font-family: 'JetBrains Mono', monospace;
+            background-color: #000000;
+            font-size: 17px;
+            padding: 5px;
+    }
+    
+   
+    body h1 {
+        color: #ffff00;
+        padding: 5px;
+        font-size: 25px;
+        font-family: 'JetBrains Mono', monospace;        
+    }
+    body h2 {
+        color: #0000ff;
+        font-size: 20px;
+        padding: 5px;
+        font-weight: bold;
+        font-family: 'JetBrains Mono', monospace;
+    }
+p3 {
+        color: #ffffff;
+        font-size: 20px;
+        font-family: 'Sans-serif', Verdana;
+    }
+    p4 {
+        color: #ffffff;
+        font-size: 17px;
+        font-family: 'Sans-serif', Verdana;
+    }
+
+
+    
+      header {
+            font-family: 'Monospace', Courier;
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+    header h1 {
+        font-family: 'Serif', Times New Roman;
+        font-size: 35px;
+        color: #FFFF00;
+    }  
+    header h2 {
+          font-family: 'JetBrains Mono', monospace;
+        font-size: 26px;
+        color: blue;
+    }
+header p1 {
+           font-family: 'Serif', Times New Roman;
+        font-size: 28px;
+        color: red;
+    }    
+          
+    
+.menu-container {
+            position: relative;
+            color: #000000;
+            background-color: #0000ff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #3f3fff;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .menu a {
+                display: block;
+                padding: 12px;
+            }
+        }
+
+        section {
+            padding: 20px;
+            background-color: #00ff00;
+            font-color: #ff0000;
+            text-align: center;
+        }
+    p5 {
+        color: #ff0000;
+        font-size: 20px;
+    }
+    P6 {
+        color: #000000;
+        font-size: 20px
+    }
+
+        h5 {
+            color: #ffff00;
+            font-size: 40px;
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+
+        footer {
+            background-color: #575757;
+            padding: 10px;
+            width: 100%;
+            bottom: 0;
+        }
+    footer p {
+        color: #ffff;
+        background-color: #575757;
+        text-align: center;
+    }
+
+        .container {
+            width: 100%;
+            margin: auto;
+        }
+    
+    ul {
+        color: #00ff00;
+    }
+    
+/* Comment Box Styles */
+.comment-box {
+    background-color: #00ffff;
+    padding: 30px;
+    margin: 10px;
+    border-top: 4px solid #0000ff;
+    border-bottom: 4px solid #0000ff;
+    border-right: 4px solid #0000ff;
+    border-left: 4px solid #0000ff;
+}
+
+.comment-box h2 {
+    color: #0000ff;
+    font-size: 25px;
+}
+
+.comment-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-box label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.comment-box input,
+.comment-box textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.comment-box textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.comment-box button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #0fff00;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    border: 5px;;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-box button:hover {
+    background-color: #ff0000;
+}
+    .comments-list {
+            margin-top: 20px;
+        }
+
+        .comment-item {
+            background-color: #e9ecef;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Welcome to nphstudy.com</h1>
+        <h2> This web is develop by</h2>
+        <p1> Deepanshu Ranjan</p1>
+        
+    </header>
+
+     <div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="about_developers">About Developer</a></li>
+                <li><a href="term_&_conditions">Term & Conditions</a></li>
+            </ul>
+        </nav>
+    </div>
+
+        
+    </nav><br><br><br>
+<h1>Dalvik Virtual Machine</h1>
+<ul>    
+<li><p>Dalvik Virtual Machine (DVM) Android operating system के शुरुआती version में उपयोग की जाने वाली virtual machine थी, जो खासतौर पर mobile devices के लिए design की गई थी.</p></li>
+
+  <li><p>Java का code सीधे DVM पर नहीं चल सकता था, इसलिए इसे पहले Dalvik Executable (.dex) formate में convert किया जाता था, जिससे यह optimized तरीके से run हो सके.</p></li>
+
+  <li><p>DVM में Just-In-Time (JIT) compiler का उपयोग किया जाता था, जिससे runtime पर code को compile कर performance को बेहतर बनाया जाता था.</p></li>
+
+<li><p>DVM कम memory और बैटरी की खपत करता था क्योंकि यह register-based architecture पर काम करता था, जबकि Java Virtual Machine (JVM) stack-based architecture का उपयोग करती थी और ज्यादा memory लेती थी.</p></li>
+
+<li><p>DVM multitasking को support करता था, जिससे एक साथ कई apps बिना किसी रुकावट के run हो सकती थीं.</p></li>
+
+<li><p>DVM, Linux Kernel के ऊपर चलता था, जो memory management, security और process scheduling को control करता था.</p></li>
+
+<li><p>जब कोई app install होती थी, तो उसका Java code पहले .dex formate में बदला जाता था, फिर DVM इसे runtime पर interpret कर app को execute करता था.</p></li>
+
+<li><p>Android 5.0 (Lollipop) के बाद DVM को Android Runtime (ART) से replace कर दिया गया, क्योंकि ART Ahead-Of-Time (AOT) compilation का उपयोग करता है, जिससे app पहले से ही optomize होकर install होती है और ज्यादा तेज़ी से run होती है.</p></li>
+
+<li><p>DVM ने Android app development को बेहतर बनाया, क्योंकि यह कम RAM और CPU power में अच्छा performance, battery saving, और secure app execution प्रदान करता था.</p></li>
+
+<li><p>हालांकि अब DVM का उपयोग नहीं होता, लेकिन यह Android के शुरुआती development में एक महत्वपूर्ण भूमिका निभाता था.</p></li>
+
+</ul>
+<br><br>
+    <section>
+           <p5><b><i> निवेदन:</i></b></p5>
+           <p6> अगर आपको हमारी ये post पसंद आई हो, तो अपने दोस्तों के पास भी share करे और हमे comment करके जरूर बताए और अगर आपको किसी other subject में कोई problem हो तो हमे comment के जरिए बताए, हम आपकी problem को solve करने में मदद करेंगे. Thank you!</p6>
+       </section><br> <br><br>
+       
+
+<div class="comment-box">
+    <h2><i>Please Write your comment &#128071; </i></h2><br>
+    <form onsubmit="addComment(event)">
+        <label for="name"> Name: </label>
+        <input type="text" id="nameInput" placeholder="Enter Your Name" required><br>
+        <label for="comment"> Comment: </label>
+        <textarea id="commentInput" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Post Comment</button>
+    </form>
+</div>
+    <br>
+     <!-- Admin Login -->
+<button onclick="adminLogin()">Admin Login</button>
+<p id="adminStatus" style="color: yellow;"></p>
+    
+<section class="comments-list" id="commentsList">
+    <h2>All Comments:</h2>
+</section>
+
+<script>
+ function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+}
+
+    let isAdmin = false; // एडमिन लॉगिन स्टेटस
+
+    function adminLogin() {
+        let password = prompt("Enter Admin Password:");
+        if (password === "shakya80") { 
+            isAdmin = true;
+            document.getElementById("adminStatus").innerText = "Admin Logged In!";
+            displayComments(); // फिर से कमेंट्स दिखाओ ताकि Delete बटन ऐड हो जाए
+        } else {
+            alert("Wrong Password! Try again.");
+        }
+    }
+
+    function addComment(event) {
+        event.preventDefault();
+        let name = document.getElementById("nameInput").value;
+        let comment = document.getElementById("commentInput").value;
+        let timestamp = new Date().toLocaleString();
+
+        let comments = JSON.parse(localStorage.getItem("comments")) || [];
+        comments.push({ name, comment, timestamp });
+        localStorage.setItem("comments", JSON.stringify(comments));
+
+        document.getElementById("nameInput").value = "";
+        document.getElementById("commentInput").value = "";
+
+        displayComments();
+    }
+
+    function displayComments() {
+        let comments = JSON.parse(localStorage.getItem("comments")) || [];
+        let commentsList = document.getElementById("commentsList");
+        commentsList.innerHTML = "<h2>All Comments:</h2>";
+
+        comments.forEach((commentObj, index) => {
+            let div = document.createElement("div");
+            div.classList.add("comment-item");
+            div.innerHTML = `<strong>${commentObj.name}</strong> <br> ${commentObj.comment} <br> <small>${commentObj.timestamp}</small> <br>`;
+
+            // अगर एडमिन लॉग इन है तो Delete बटन दिखाओ
+            if (isAdmin) {
+                div.innerHTML += `<button onclick="deleteComment(${index})">Delete</button>`;
+            }
+
+            commentsList.appendChild(div);
+        });
+    }
+
+    function deleteComment(index) {
+        if (isAdmin) {
+            let comments = JSON.parse(localStorage.getItem("comments")) || [];
+            comments.splice(index, 1);
+            localStorage.setItem("comments", JSON.stringify(comments));
+            displayComments();
+        } else {
+            alert("Only admin can delete comments!");
+        }
+    }
+
+    displayComments(); // पेज लोड होते ही कमेंट्स दिखें
+</script>
+       
+    <footer>
+        <p><small>&copy; 2024 Deepanshu Ranjan. All rights reserved.</small></p>
+    </footer>
+</body>
+</html>
