@@ -9,7 +9,7 @@
     <meta name="nphstudy" content="Deepanshu Ranjan">
     <title>Introduction to PHP, Features of php and how php work in Hindi</title>
     <style>
-        body {
+      body {
             font-family: 'JetBrains Mono', monospace;
             background-color: #000000;
             margin: 0;
@@ -19,48 +19,35 @@
     body p { 
         font-family: 'JetBrains Mono', monospace;
             background-color: #000000;
-            font-size: 20px;
+            font-size: 15px;
             padding: 5px;
     }
     
    
-    body p1 {
+    body h1 {
         color: #ffff00;
         padding: 5px;
-        font-size: 35px;
+        font-size: 25px;
         font-family: 'JetBrains Mono', monospace;        
     }
-    body p2 {
-        color: #0000ff;
-        font-size: 30px;
+    body h2 {
+        color: #0f0fff;
+        font-size: 20px;
         padding: 5px;
         font-weight: bold;
         font-family: 'JetBrains Mono', monospace;
     }
 p3 {
         color: #ffffff;
-        font-size: 30px;
+        font-size: 20px;
         font-family: 'Sans-serif', Verdana;
     }
     p4 {
         color: #ffffff;
-        font-size: 25px;
+        font-size: 17px;
         font-family: 'Sans-serif', Verdana;
     }
 
- .box {
-    background-color: red;
-    padding: 20px;
-    border: 2px solid #0000ff;
-    border-radius: 30px;
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 96%;
-}
-    .box h2 {
-        color: #0000ff;
-        font-weight: 900;
-    }
 
     
       header {
@@ -71,38 +58,117 @@ p3 {
         }
     header h1 {
         font-family: 'Serif', Times New Roman;
-        font-size: 60px;
+        font-size: 35px;
         color: #FFFF00;
     }  
     header h2 {
           font-family: 'JetBrains Mono', monospace;
-        font-size: 40px;
+        font-size: 26px;
         color: blue;
     }
 header p1 {
            font-family: 'Serif', Times New Roman;
-        font-size: 50px;
+        font-size: 28px;
         color: red;
     }    
           
-        nav {
+    
+.menu-container {
+            position: relative;
+            color: #000000;
+            background-color: #0000ff;
+            padding: 10px 20px;
             display: flex;
-            justify-content: center;
-            background-color: #00ffff;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        nav a {
-            color: #0000ff;
-            padding: 14px 20px;
+        .hamburger-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
             text-decoration: none;
-            text-align: center;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s ease;
         }
 
-        nav a:hover {
-            background-color: #ff0000;
+        .menu a:hover {
+            background-color: #3f3fff;
+            border-radius: 5px;
         }
 
-        section {
+        @media screen and (max-width: 768px) {
+            .hamburger-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .menu a {
+                display: block;
+                padding: 12px;
+            }
+        }
+    .box {
+    background-color: red;
+    padding: 0;
+    border: 2px solid #0000ff;
+    border-radius: 20px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+}
+    .box h2 {
+        color: yellow;
+        font-size: 25px;
+        font-weight: 900;
+    }
+    
+            section {
             padding: 20px;
             background-color: #00ff00;
             font-color: #ff0000;
@@ -110,21 +176,21 @@ header p1 {
         }
     p5 {
         color: #ff0000;
-        font-size: 25px;
+        font-size: 20px;
     }
     P6 {
         color: #000000;
-        font-size: 25px
+        font-size: 20px
     }
 
         h5 {
             color: #ffff00;
-            font-size: 80px;
+            font-size: 40px;
         }
 
         p {
             font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
+            font-size: 14px;
             color: #FFFFFF;
         }
 
@@ -141,7 +207,7 @@ header p1 {
     }
 
         .container {
-            width: 80%;
+            width: 100%;
             margin: auto;
         }
     
@@ -162,7 +228,7 @@ header p1 {
 
 .comment-box h2 {
     color: #0000ff;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .comment-box form {
@@ -173,7 +239,7 @@ header p1 {
 .comment-box label {
     margin-top: 10px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 17px;
 }
 
 .comment-box input,
@@ -215,6 +281,7 @@ header p1 {
             margin-top: 10px;
             border-radius: 5px;
         }
+
     </style>
 </head>
 <body>
@@ -225,18 +292,20 @@ header p1 {
         
     </header>
 
-    <nav>
-        <a href="file:///storage/emulated/0/Web%20Project/home%20page/home%20pape/Home.html">Home</a>
-        <a href="file:///storage/emulated/0/Web%20Project/About%20us/About.html">About</a>
-        <a href="file:///storage/emulated/0/Web%20Project/Services/Services.html">Services</a>
-        <a href="file:///storage/emulated/0/Web%20Project/Contact/Contact.html">Contact</a>
-      <a href="file:///storage/emulated/0/Web%20Project/About%20Developers/About%20Developers.html">About Developers</a>
-      <a href="#social-media">Social Media</a>
-      
-  
-        
-    </nav><br><br><br>
-    
+   <div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="about_developers">About Developer</a></li>
+                <li><a href="term_&_conditions">Term & Conditions</a></li>
+            </ul>
+        </nav>
+    </div><br><br><br>
+     
     <div class="box">
         <h2> Click for Read or Scroll &#x1F60A</h2><br>
         <h3>
@@ -250,7 +319,7 @@ header p1 {
         <br>
         
     
-    <p1 id="target-section">#Introduction to PHP</p1>
+    <h1 id="target-section">#Introduction to PHP</h1>
     <ul>
 <li><p>PHP का पूरा नाम Hypertext Preprocessor है। लेकिन इसको Personal Home Page भी कहते है.</p></li>
 <li><p>PHP एक open source तथा server side scripting language है इसको HTML के साथ use में लाया जा सकता है.</p></li>
@@ -265,7 +334,7 @@ header p1 {
 <li><p>PHP file के .PHP, .PHP3, या .PHTML extension होते है.</p></li>
     </ul>
     
-        <p1 id="target-section1"> # How PHP work</p1>
+        <h1 id="target-section1"> # How PHP work</h1>
         
     <ul>
         <li><p>जब कोई user browser में URL डालता है (जैसे `https://example.com/index.php`), तो यह web server को एक HTTP request भेजता है.</p></li>  
@@ -286,82 +355,82 @@ header p1 {
 <li><p>PHP windows, linux और macOS servers पर चलता है और विभिन्न database और web server के साथ संगत है.</p></li>
     </ul>
     
-    <p1 id="features-of-php"># Features of PHP</p1>
+    <h1 id="features-of-php"># Features of PHP</h1>
     <ul>
         <li><p>PHP (Hypertext Preprocessor) एक server-side scripting language है जो web development के लिए उपयोग की जाती है. यह एक powerful language है जिसे dynamic और interactive web page बनाने के लिए design किया गया है. आइए PHP की Main Features (विशेषताओं) को विस्तार से समझते हैं:</p></li>
     </ul>
     
-    <p2>1. Open Source & Free </p2>
+    <h2>1. Open Source & Free </h2>
     <ul>
         <li><p>PHP एक open source language है, जिसका अर्थ है कि इसे कोई भी free में download और use कर सकता है. इसके source code को आवश्यकतानुसार change किया जा सकता है. </p></li>
     </ul>
     
-    <p2>2. Platform Independent</p2>
+    <h2>2. Platform Independent</h2>
         <ul>
             <li><p>PHP को Windows, Linux, macOS आदि किसी भी operating system पर चलाया जा सकता है. यह विभिन्न servers जैसे Apache, Nginx, IIS आदि के साथ भी संगत है.</p></li>
     </ul>
     
-    <p2>3. Server-Side Scripting </p2>
+    <h2>3. Server-Side Scripting </h2>
         <ul>
             <li><p>PHP एक server-side scripting language है, जिसका मतलब है कि इसका code server पर run होता है और output HTML के रूप में browser को भेजा जाता है. इससे website अधिक secure और fast बनती है.</p></li>
         </ul>
             
-    <p2>4. Dynamic & Interactive Web Pages</p2>
+    <h2>4. Dynamic & Interactive Web Pages</h2>
         <ul>
             <li><p>PHP का उपयोग करके dynamic web page बनाए जा सकते हैं, जो user input के आधार पर content को बदल सकते हैं. जैसे – login system, form handling, e-commerce website आदि.</p></li>
     </ul>
     
-    <p2>5. Easy to Learn & Use</p2>
+    <h2>5. Easy to Learn & Use</h2>
         <ul>
             <li> <p>PHP का syntax बहुत आसान और C, C++ व Java जैसी अन्य languages से मिलता-जुलता है. इसके कारण इसे सीखना और उपयोग करना आसान है.</p></li>
     </ul>
     
-    <p2>6. Database Support</p2>
+    <h2>6. Database Support</h2>
         <ul>
             <li><p>PHP विभिन्न database जैसे MySQL, PostgreSQL, Oracle, MongoDB आदि को support करता है, जिससे data को आसानी से store और manage किया जा सकता है.</p></li>
         </ul>
     
-    <p2>7. High Performance & Speed</p2>
+    <h2>7. High Performance & Speed</h2>
         <ul>
             <li><p>PHP अन्य scripting language की तुलना में fast है, क्योंकि यह server पर कम load डालता है और कम time में output generate करता है.</p></li>
     </ul>
     
-    <p2>8. Security Features</p2>
+    <h2>8. Security Features</h2>
         <ul>
             <li><p>PHP में कई security features शामिल हैं, जैसे – SQL Injection, Cross-Site Scripting (XSS), और Cross-Site Request Forgery (CSRF) से security के लिए in built function.</p></li>
     </ul>
     
-    <p2>9. Large Community Support</p2>
+    <h2>9. Large Community Support</h2>
         <ul>
             <li><p>PHP की एक large community है, जिससे कोई भी developer आसानी से सहायता प्राप्त कर सकता है। Online कई forms, tutorials और documentation उपलब्ध हैं.</p></li>
     </ul>
     
-    <p2>10. Multiple Framework Support</p2>
+    <h2>10. Multiple Framework Support</h2>
         <ul>
             <li><p>PHP कई popular framework को support करता है, जैसे – Laravel, CodeIgniter, Symfony, Zend, Yii, CakePHP आदि, जो development को fast और simple बनाते हैं.</p></li>
     </ul>
     
-    <p2>11. Object-Oriented Programming - OOPs</p2>
+    <h2>11. Object-Oriented Programming - OOPs</h2>
         <ul>    
         <li><p>PHP में OOPs features मौजूद हैं, जिससे बड़े और modular projects को आसानी से develop किया जा सकता है.</p></li>
     </ul>
     
-    <p2>12. File Handling</p2>
+    <h2>12. File Handling</h2>
         <ul>
             <li><p>PHP में files को read, write, open, close करने और delete करने के लिए कई inbuilt functions होते हैं. यह features वेबसाइट पर file uploading और downloading में मदद करता है.</p></li>
     </ul>
     
-    <p2>13. Multi-Threading Support</p2>
+    <h2>13. Multi-Threading Support</h2>
         <ul>    
         <li><p>PHP एक समय में कई task को संभाल सकता है, जिससे यह high performance web application के लिए उपयुक्त बनता है.</p></li>
     </ul>
     
-    <p2>14. Code Reusability</p2>
+    <h2>14. Code Reusability</h2>
         <ul>    
         <li><p>PHP में code को विभिन्न modules और functions में विभाजित किया जा सकता है, जिससे code को बार-बार उपयोग करना आसान हो जाता है.</p></li>
         </ul>
     
-    <p2>15. Web Services & API Integration</p2>
+    <h2>15. Web Services & API Integration</h2>
         <ul>
         <li><p>PHP RESTful और SOAP web services को support करता है, जिससे अन्य application के साथ आसानी से data का आदान-प्रदान किया जा सकता है.</p></li>      
         </ul>
@@ -388,6 +457,10 @@ header p1 {
 </section>
 
 <script>
+ function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+}
     let isAdmin = false; // एडमिन लॉगिन स्टेटस
 
     function adminLogin() {
