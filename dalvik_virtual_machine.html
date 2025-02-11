@@ -67,57 +67,7 @@
             color: red;
         }    
 
-        .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #0000ff;
-            padding: 10px 20px;
-            color: white;
-        }
-        .menu {
-            list-style: none;
-            display: flex;
-        }
-        .menu li {
-            margin: 0 15px;
-        }
-        .menu li a {
-            color: white;
-            text-decoration: none;
-        }
-        .hamburger {
-            display: none;
-            cursor: pointer;
-        }
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px auto;
-            background: white;
-        }
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-                position: absolute;
-                top: 50px;
-                left: 0;
-                width: 100%;
-                background: #333;
-                flex-direction: column;
-                text-align: center;
-            }
-            .menu li {
-                padding: 10px;
-            }
-            .hamburger {
-                display: block;
-            }
-                    .menu hover {
-                                background-color: #333;
-                    }
-        }
+        
             section {
             padding: 20px;
             background-color: #00ff00;
@@ -274,13 +224,13 @@
      <nav class="navbar">
         
         <ul class="menu">
-            <li><a href="home">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="services">Services</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="about_developers">About Developer</a></li>
-                <li><a href="term_&_conditions">Term & Conditions</a></li>
-                    <li><a href="all_notes">Notes</a></li>
+            <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about_developers.html">About Developer</a></li>
+                <li><a href="term_&_conditions.html">Term & Conditions</a></li>
+                    <li><a href="all_notes.html">Notes</a></li>
         </ul>
         <div class="hamburger" onclick="toggleMenu()">
             <span class="bar"></span>
@@ -340,7 +290,9 @@
 </section>
 
 <script>
- 
+ function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+        }
     let isAdmin = false; // एडमिन लॉगिन स्टेटस
 
     function adminLogin() {
