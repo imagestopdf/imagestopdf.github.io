@@ -340,9 +340,15 @@
 </section>
 
 <script>
- function toggleMenu() {
-            document.querySelector('.menu').classList.toggle('active');
-        }
+ if (window.innerWidth < 1024) { 
+    let url = new URL(window.location.href);
+    if (!url.searchParams.has('desktop')) {
+        url.searchParams.set('desktop', 'true');
+        window.location.href = url.href;
+    }
+}
+
+    }
     let isAdmin = false; // एडमिन लॉगिन स्टेटस
 
     function adminLogin() {
