@@ -67,6 +67,55 @@
             color: red;
         }    
 
+           .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 10px 20px;
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+        .menu li {
+            margin: 0 10px;
+        }
+        .menu li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+        .menu li a:hover {
+            background: #555;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #333;
+                position: absolute;
+                top: 50px;
+                left: 0;
+            }
+            .menu.active {
+                display: flex;
+            }
+            .menu li {
+                text-align: center;
+                margin: 10px 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
         
             section {
             padding: 20px;
@@ -221,9 +270,10 @@
     </header>
     <br>
 
-     <nav class="navbar">
-        
+   <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <ul class="menu">
+     
             <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
