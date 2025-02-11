@@ -75,6 +75,7 @@ header p1 {
     
 .menu-container {
             position: relative;
+            width: 98%;
             color: #000000;
             background-color: #0000ff;
             padding: 10px 20px;
@@ -155,7 +156,8 @@ header p1 {
         }
 
         section {
-            padding: 20px;
+            padding: 10px;
+            width: 100%;
             background-color: #00ff00;
             font-color: #ff0000;
             text-align: center;
@@ -204,8 +206,8 @@ header p1 {
 /* Comment Box Styles */
 .comment-box {
     background-color: #00ffff;
-    padding: 30px;
-    margin: 10px;
+    width: 99%;
+    padding: 10px;
     border-top: 4px solid #0000ff;
     border-bottom: 4px solid #0000ff;
     border-right: 4px solid #0000ff;
@@ -219,22 +221,25 @@ header p1 {
 
 .comment-box form {
     display: flex;
+    margin: 20px:
+    width: 100%;
     flex-direction: column;
 }
 
 .comment-box label {
     margin-top: 10px;
+    margin-left: 5px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .comment-box input,
 .comment-box textarea {
-    margin-top: 5px;
+    margin-top: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    
 }
 
 .comment-box textarea {
@@ -307,7 +312,7 @@ header p1 {
        </section><br> <br><br>
        
 <div class="comment-box">
-    <h2><i>Please Write your comment &#128071; </i></h2><br>
+    <h2>Please Write your comment &#128071; </h2><br>
     <form onsubmit="addComment(event)">
         <label for="name"> Name: </label>
         <input type="text" id="nameInput" placeholder="Enter Your Name" required><br>
