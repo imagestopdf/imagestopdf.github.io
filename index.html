@@ -146,15 +146,11 @@
     text-align: center;
     
 }
-    
-    .image-container {
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center (agar height set ho) */
-    height: 100vh; /* Pure screen ke center me dikhane ke liye */
-}
-
-    
+   .image-container {
+  width: 100%;  /* Image ko screen ke full width tak stretch karega */
+  height: auto; /* Aspect ratio ko maintain karega */
+  display: block; /* Extra space remove karega */
+}  
   
         /* Section Styling */
         section {
