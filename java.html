@@ -4,77 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Java एक high-level, object-oriented, और platform-independent programming language है, जिसे Sun Microsystems (अब Oracle Corporation का हिस्सा) ने 1995 में develop किया था.">
-    <meta name="keywords" content="Introduction to java in hindi, introduction to java programming in hindi, features of java in hindi, advantages and disadvantages of java in hindi, what is java in hindi, java hindi notes, nphstudy.com">
-    <meta name="deepanshuranjan80" content="deepanshu ranjan">
     <title>Introduction to PHP and Features of PHP</title>
     <style>
-      body {
+                        /* Basic Styling */
+        * {
+            margin: 10;
+            padding: 20;
+            box-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #000000;
+            width: fix;
+            padding: 0;
+            margin: 0;
+            color: #ffffff;
+            box-size: 30px;
+        }
+    
+        body p { 
             font-family: 'JetBrains Mono', monospace;
             background-color: #000000;
-            margin-left: 6px;
-            padding: 0;
+            font-size: 17px;
+            width: 100% fix;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+
         }
     
-    body p { 
-        font-family: 'JetBrains Mono', monospace;
-            background-color: #000000;
-            font-size: 15px;
+        body h1 {
+            color: #ffff00;
             padding: 5px;
-    }
-    
-   
-    body h1 {
-        color: #ffff00;
-        padding: 5px;
-        font-size: 25px;
-        font-family: 'JetBrains Mono', monospace;        
-    }
-    body h2 {
-        color: #0000ff;
-        font-size: 20px;
-        padding: 5px;
-        font-weight: bold;
-        font-family: 'JetBrains Mono', monospace;
-    }
-p3 {
-        color: #ffffff;
-        font-size: 20px;
-        font-family: 'Sans-serif', Verdana;
-    }
-    p4 {
-        color: #ffffff;
-        font-size: 17px;
-        font-family: 'Sans-serif', Verdana;
-    }
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 25px;
+            font-family: 'JetBrains Mono', monospace;        
+        }
+        body h2 {
+            color: #0000ff;
+            font-size: 20px;
+            padding: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-weight: bold;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        p3 {
+            color: #ffffff;
+            font-size: 20px;
+            font-family: 'Sans-serif', Verdana;
+        }
+        p4 {
+            color: #ffffff;
+            font-size: 17px;
+            font-family: 'Sans-serif', Verdana;
+        }
 
-
-    
-      header {
+        header {
             font-family: 'Monospace', Courier;
             background-color: #000000;
-            padding: 20px;
+           
             text-align: center;
         }
-    header h1 {
-        font-family: 'Serif', Times New Roman;
-        font-size: 35px;
-        color: #FFFF00;
-    }  
-    header h2 {
-          font-family: 'JetBrains Mono', monospace;
-        font-size: 26px;
-        color: blue;
-    }
-header p1 {
-           font-family: 'Serif', Times New Roman;
-        font-size: 28px;
-        color: red;
-    }    
-          
-    
-.menu-container {
+        header h1 {
+            font-family: 'Serif', Times New Roman;
+            font-size: 35px;
+            color: #FFFF00;
+        }  
+        header h2 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 26px;
+            color: blue;
+        }
+        header p1 {
+            font-family: 'Serif', Times New Roman;
+            font-size: 28px;
+            color: red;
+        }    
+
+          .menu-container {
             position: relative;
+            width: fix;
             color: #000000;
             background-color: #0000ff;
             padding: 10px 20px;
@@ -154,20 +165,22 @@ header p1 {
             }
         }
 
-        section {
+
+            section {
             padding: 20px;
+            width: fix;
             background-color: #00ff00;
             font-color: #ff0000;
             text-align: center;
         }
-    p5 {
-        color: #ff0000;
-        font-size: 20px;
-    }
-    P6 {
-        color: #000000;
-        font-size: 20px
-    }
+        p5 {
+            color: #ff0000;
+            font-size: 20px;
+        }
+        P6 {
+            color: #000000;
+            font-size: 20px
+        }
 
         h5 {
             color: #ffff00;
@@ -182,30 +195,29 @@ header p1 {
 
         footer {
             background-color: #575757;
-            padding: 10px;
-            width: 100%;
             bottom: 0;
         }
-    footer p {
-        color: #ffff;
-        background-color: #575757;
-        text-align: center;
-    }
+        footer p {
+            background-color: #575757;
+            font-size: small;
+            color: #ffff;
+            text-align: center;
+        }
 
         .container {
             width: 100%;
             margin: auto;
         }
     
-    ul {
-        color: #00ff00;
-    }
+        ul {
+            color: #00ff00;
+        }
     
+        /* Comment Box Styles */
 /* Comment Box Styles */
 .comment-box {
     background-color: #00ffff;
-    padding: 30px;
-    margin: 10px;
+    padding: 10px;
     border-top: 4px solid #0000ff;
     border-bottom: 4px solid #0000ff;
     border-right: 4px solid #0000ff;
@@ -219,22 +231,26 @@ header p1 {
 
 .comment-box form {
     display: flex;
+    margin: 20px:
+    width: 100%;
     flex-direction: column;
 }
 
 .comment-box label {
     margin-top: 10px;
+    color: #000000;
+    margin-left: 5px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .comment-box input,
 .comment-box textarea {
-    margin-top: 5px;
+    margin-top: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    
 }
 
 .comment-box textarea {
@@ -263,10 +279,39 @@ header p1 {
 
         .comment-item {
             background-color: #e9ecef;
+            color: #000000;
             padding: 8px;
             margin-top: 10px;
             border-radius: 5px;
         }
+
+        /* Mobile-specific adjustments */
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 28px;
+            }
+            header h2 {
+                font-size: 22px;
+            }
+            header p1 {
+                font-size: 24px;
+            }
+            .comment-box {
+                padding: 15px;
+            }
+            .comment-box h2 {
+                font-size: 22px;
+            }
+            .comment-box button {
+                font-size: 18px;
+            }
+            section {
+                padding: 10px;
+            }
+            p5, p6 {
+                font-size: 18px;
+            }
+        }  
 
     </style>
 </head>
@@ -277,24 +322,25 @@ header p1 {
         <p1> Deepanshu Ranjan</p1>
         
     </header>
+      <br>
 
    <div class="menu-container">
         <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
         <nav id="menu" class="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-                <li><a href="about_developers.html">About Developer</a></li>
-                <li><a href="term_&_conditions.html">Term & Conditions</a></li>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="notes">Notes</a></li>
+                <li><a href="term_&_conditions">Term & Conditions</a></li>
             </ul>
         </nav>
     </div>
    
   
         
-    </nav><br><br><br>
+    <br><br><br>
     
    <h1>Introduction to Java</h1>
     <p> Java एक high-level, object-oriented, और platform-independent programming language है, जिसे Sun Microsystems (अब Oracle Corporation का हिस्सा) ने 1995 में develop किया था। Java का मुख्य उद्देश्य "write once, run anywhere" के सिद्धांत पर आधारित है, जिससे कि एक बार लिखे गए Java code को बिना बदलाव के किसी भी platform पर चलाया जा सके। यह language robust (मजबूत), secure (सुरक्षित), और versatile (लचीला) है, जिसका use web development, mobile applications, desktop applications, और enterprise solutions सहित कई प्रकार की applications के लिए किया जाता है.</p>
@@ -440,8 +486,8 @@ header p1 {
 </div>
     <br>
      <!-- Admin Login -->
-<button onclick="adminLogin()">Admin Login</button>
-<p id="adminStatus" style="color: yellow;"></p>
+<button style="background-color: black; padding: 0px; border: none;" onclick="adminLogin()">Admin Login</button>
+<p id="adminStatus" style="color: red;"></p>
     
 <section class="comments-list" id="commentsList">
     <h2>All Comments:</h2>
