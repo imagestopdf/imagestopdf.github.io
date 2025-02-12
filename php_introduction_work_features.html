@@ -9,72 +9,86 @@
     <meta name="nphstudy" content="Deepanshu Ranjan">
     <title>Introduction to PHP, Features of php and how php work in Hindi</title>
     <style>
-      body {
+                        /* Basic Styling */
+        * {
+            margin: 10;
+            padding: 20;
+            box-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #000000;
+            width: fix;
+            padding: 0;
+            margin: 0;
+            color: #ffffff;
+            box-size: 30px;
+        }
+    
+        body p { 
             font-family: 'JetBrains Mono', monospace;
             background-color: #000000;
-            margin: 0;
-            padding: 0;
+            font-size: 17px;
+            width: 100% fix;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+
         }
     
-    body p { 
-        font-family: 'JetBrains Mono', monospace;
-            background-color: #000000;
-            font-size: 15px;
+        body h1 {
+            color: #ffff00;
             padding: 5px;
-    }
-    
-   
-    body h1 {
-        color: #ffff00;
-        padding: 5px;
-        font-size: 25px;
-        font-family: 'JetBrains Mono', monospace;        
-    }
-    body h2 {
-        color: #0f0fff;
-        font-size: 20px;
-        padding: 5px;
-        font-weight: bold;
-        font-family: 'JetBrains Mono', monospace;
-    }
-p3 {
-        color: #ffffff;
-        font-size: 20px;
-        font-family: 'Sans-serif', Verdana;
-    }
-    p4 {
-        color: #ffffff;
-        font-size: 17px;
-        font-family: 'Sans-serif', Verdana;
-    }
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 25px;
+            font-family: 'JetBrains Mono', monospace;        
+        }
+        body h2 {
+            color: #0000ff;
+            font-size: 20px;
+            padding: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-weight: bold;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        p3 {
+            color: #ffffff;
+            font-size: 20px;
+            font-family: 'Sans-serif', Verdana;
+        }
+        p4 {
+            color: #ffffff;
+            font-size: 17px;
+            font-family: 'Sans-serif', Verdana;
+        }
 
-
-    
-      header {
+        header {
             font-family: 'Monospace', Courier;
             background-color: #000000;
-            padding: 20px;
+           
             text-align: center;
         }
-    header h1 {
-        font-family: 'Serif', Times New Roman;
-        font-size: 35px;
-        color: #FFFF00;
-    }  
-    header h2 {
-          font-family: 'JetBrains Mono', monospace;
-        font-size: 26px;
-        color: blue;
-    }
-header p1 {
-           font-family: 'Serif', Times New Roman;
-        font-size: 28px;
-        color: red;
-    }    
-          
-    
-.menu-container {
+        header h1 {
+            font-family: 'Serif', Times New Roman;
+            font-size: 35px;
+            color: #FFFF00;
+        }  
+        header h2 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 26px;
+            color: blue;
+        }
+        header p1 {
+            font-family: 'Serif', Times New Roman;
+            font-size: 28px;
+            color: red;
+        }    
+
+          .menu-container {
             position: relative;
+            width: fix;
             color: #000000;
             background-color: #0000ff;
             padding: 10px 20px;
@@ -153,35 +167,45 @@ header p1 {
                 padding: 12px;
             }
         }
-    .box {
+
+       .box {
     background-color: red;
-    padding: 0;
+    width: fix;
+    padding: 20px;
     border: 2px solid #0000ff;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 100%;
-}
-    .box h2 {
-        color: yellow;
-        font-size: 25px;
-        font-weight: 900;
-    }
+    text-align: left;
     
+}
+    box h1 {
+    color: yellow;
+    text-align: center;
+        
+    }
+       
+    box li {
+        color: yellow;
+        position: relative;
+        padding-left: 5px;
+    }
+ 
+
             section {
             padding: 20px;
+            width: fix;
             background-color: #00ff00;
             font-color: #ff0000;
             text-align: center;
         }
-    p5 {
-        color: #ff0000;
-        font-size: 20px;
-    }
-    P6 {
-        color: #000000;
-        font-size: 20px
-    }
+        p5 {
+            color: #ff0000;
+            font-size: 20px;
+        }
+        P6 {
+            color: #000000;
+            font-size: 20px
+        }
 
         h5 {
             color: #ffff00;
@@ -196,30 +220,29 @@ header p1 {
 
         footer {
             background-color: #575757;
-            padding: 10px;
-            width: 100%;
             bottom: 0;
         }
-    footer p {
-        color: #ffff;
-        background-color: #575757;
-        text-align: center;
-    }
+        footer p {
+            background-color: #575757;
+            font-size: small;
+            color: #ffff;
+            text-align: center;
+        }
 
         .container {
             width: 100%;
             margin: auto;
         }
     
-    ul {
-        color: #00ff00;
-    }
+        ul {
+            color: #00ff00;
+        }
     
+        /* Comment Box Styles */
 /* Comment Box Styles */
 .comment-box {
     background-color: #00ffff;
-    padding: 30px;
-    margin: 10px;
+    padding: 10px;
     border-top: 4px solid #0000ff;
     border-bottom: 4px solid #0000ff;
     border-right: 4px solid #0000ff;
@@ -233,22 +256,26 @@ header p1 {
 
 .comment-box form {
     display: flex;
+    margin: 20px:
+    width: 100%;
     flex-direction: column;
 }
 
 .comment-box label {
     margin-top: 10px;
+    color: #000000;
+    margin-left: 5px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .comment-box input,
 .comment-box textarea {
-    margin-top: 5px;
+    margin-top: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    
 }
 
 .comment-box textarea {
@@ -277,10 +304,39 @@ header p1 {
 
         .comment-item {
             background-color: #e9ecef;
+            color: #000000;
             padding: 8px;
             margin-top: 10px;
             border-radius: 5px;
         }
+
+        /* Mobile-specific adjustments */
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 28px;
+            }
+            header h2 {
+                font-size: 22px;
+            }
+            header p1 {
+                font-size: 24px;
+            }
+            .comment-box {
+                padding: 15px;
+            }
+            .comment-box h2 {
+                font-size: 22px;
+            }
+            .comment-box button {
+                font-size: 18px;
+            }
+            section {
+                padding: 10px;
+            }
+            p5, p6 {
+                font-size: 18px;
+            }
+        }  
 
     </style>
 </head>
@@ -291,28 +347,30 @@ header p1 {
         <p1> Deepanshu Ranjan</p1>
         
     </header>
+      <br>
 
    <div class="menu-container">
         <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
         <nav id="menu" class="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about_developers.html">About Developer</a></li>
-                <li><a href="term_&_conditions.html">Term & Conditions</a></li>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="term_&_conditions">Term & Conditions</a></li>
             </ul>
         </nav>
     </div><br><br><br>
      
     <div class="box">
-        <h2> Click for Read or Scroll &#x1F60A</h2><br>
+        <h1> Click for Read or Scroll &#x1F60A</h1><br>
         <h3>
-        <a href="#target-section">Introduction to PHP in Hindi</a> <br>  <br> 
-        <a href="#target-section1">How PHP work in Hindi</a><br><br>
-        <a href="#features-of-php">Features of PHP in Hindi</a>
-        </h3>    
+              <ul>
+              <li><a href="#target-section">Introduction to PHP in Hindi</a></li><br><br> 
+              <li><a href="#target-section1">How PHP work in Hindi</a></li><br><br>
+              <li><a href="#features-of-php">Features of PHP in Hindi</a></li>
+              </ul>      
+              </h3>    
         </div> 
     <br>
         <br>
@@ -524,10 +582,10 @@ header p1 {
 </script>
 
 <br>
-       <!-- Admin Login -->
-<button onclick="adminLogin()">Admin Login</button>
-<p id="adminStatus" style="color: yellow;"></p>
-  
+      <!-- Admin Login -->
+<button style="background-color: black; padding: 0px; border: none;" onclick="adminLogin()">Admin Login</button>
+<p id="adminStatus" style="color: red;"></p>
+
     <footer>
         <p><small>&copy; 2024 Deepanshu Ranjan. All rights reserved.</small></p>
     </footer>
