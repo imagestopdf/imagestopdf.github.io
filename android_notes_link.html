@@ -6,20 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction to PHP and Features of PHP</title>
     <style>
-           * {
-            margin: 10;
-            padding: 20;
-            box-size: 20px;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background-color: #000000;
+          body {
+            font-family: 'JetBrains Mono', monospace;
             width: fix;
-            padding: 0;
-            margin: 0;
-            color: #ffffff;
-            box-size: 30px;
-        }
+            background-color: #000000;
+           }
     
         body p { 
             font-family: 'JetBrains Mono', monospace;
@@ -41,7 +32,7 @@
             font-family: 'JetBrains Mono', monospace;        
         }
         body h2 {
-            color: #0000ff;
+            color: #ffffff;
             font-size: 20px;
             padding: 5px;
             margin-left: 10px;
@@ -223,9 +214,9 @@
     text-align: left;
     
 }
-    box h1 {
+    .box h1 {
     color: yellow;
-        
+    text-align: center;     
     }
        
     li {
@@ -350,7 +341,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="about_developers.html">About Developer</a></li>
+                <li><a href="notes">Notes</a></li>
                 <li><a href="term_&_conditions.html">Term & Conditions</a></li>
             </ul>
         </nav>
@@ -410,7 +401,7 @@
       <li><a href="">Activities and Activity lifecycle</a></li><br>
       <li><a href="">Permission System</a></li><br>
         </h2>
-      <h1> Basic UI Components</h1>
+      <h2> Basic UI Components</h2>
         <h2>
       <li><a href="">Text View, button, radio button</a></li><br>
       <li><a href="">Edit Text</a></li><br>
@@ -418,14 +409,14 @@
       <li><a href="">Check box, Program Bar</a></li><br>
       <li><a href="">Event Handling in Android</a></li><br>
         </h2>
-      <h1>Layouts</h1>
+      <h2>Layouts</h2>
         <h2>
       <li><a href="">Liner Layout</a></li><br>
       <li><a href="">Relative Layout</a></li><br>
       <li><a href="">Frame Layout</a></li><br>
       <li><a href="">Coordinate Layout, [dip, dp, sip, sp] versus px</a></li><br>
         </h2>
-      <h1>Intents</h1>
+      <h2>Intents</h2>
         <h2>
       <li><a href="">Intents Introduction and importance</a></li><br>
       <li><a href="">Types of Intents(Explicit Intents, Implicit Intents)</a></li><br>
@@ -491,9 +482,9 @@
     </form>
 </div>
     <br>
-    <!-- Admin Login -->
-<button style="background-color: black; padding: 0px; border: none;" onclick="adminLogin()">Admin Login</button>
-<p id="adminStatus" style="color: red;"></p>
+     <!-- Admin Login -->
+<button onclick="adminLogin()">Admin Login</button>
+<p id="adminStatus" style="color: yellow;"></p>
     
 <section class="comments-list" id="commentsList">
     <h2>All Comments:</h2>
