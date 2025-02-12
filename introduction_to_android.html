@@ -10,23 +10,38 @@
     
     <title>Introduction to android</title>
         <style>
+                        /* Basic Styling */
+        * {
+            margin: 10;
+            padding: 20;
+            box-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
         body {
-            font-family: 'JetBrains Mono', monospace;
-            width: 100%;
             background-color: #000000;
-           }
+            width: fix;
+            padding: 0;
+            margin: 0;
+            color: #ffffff;
+            box-size: 30px;
+        }
     
         body p { 
             font-family: 'JetBrains Mono', monospace;
             background-color: #000000;
             font-size: 17px;
-            width: 98%;
+            width: 100% fix;
             padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+
         }
     
         body h1 {
             color: #ffff00;
             padding: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
             font-size: 25px;
             font-family: 'JetBrains Mono', monospace;        
         }
@@ -34,6 +49,8 @@
             color: #0000ff;
             font-size: 20px;
             padding: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
             font-weight: bold;
             font-family: 'JetBrains Mono', monospace;
         }
@@ -70,8 +87,9 @@
             color: red;
         }    
 
-        .menu-container {
+          .menu-container {
             position: relative;
+            width: fix;
             color: #000000;
             background-color: #0000ff;
             padding: 10px 20px;
@@ -127,6 +145,7 @@
                 position: absolute;
                 top: 60px;
                 right: 0;
+                width: 100%;
                 background-color: #333;
                 text-align: center;
                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -150,8 +169,10 @@
             }
         }
 
-        section {
+
+            section {
             padding: 20px;
+            width: fix;
             background-color: #00ff00;
             font-color: #ff0000;
             text-align: center;
@@ -182,6 +203,7 @@
         }
         footer p {
             background-color: #575757;
+            font-size: small;
             color: #ffff;
             text-align: center;
         }
@@ -220,6 +242,7 @@
 
 .comment-box label {
     margin-top: 10px;
+    color: #000000;
     margin-left: 5px;
     font-weight: bold;
     font-size: 20px;
@@ -260,6 +283,7 @@
 
         .comment-item {
             background-color: #e9ecef;
+            color: #000000;
             padding: 8px;
             margin-top: 10px;
             border-radius: 5px;
@@ -291,8 +315,7 @@
             p5, p6 {
                 font-size: 18px;
             }
-        }
-    </style>
+        }    </style>
 </head>
 <body>
     <header>
@@ -312,7 +335,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="about_developers.html">About Developer</a></li>
+                <li><a href="notes">Notes</a></li>
                 <li><a href="term_&_conditions.html">Term & Conditions</a></li>
             </ul>
         </nav>
