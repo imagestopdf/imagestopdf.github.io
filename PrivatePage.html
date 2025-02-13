@@ -6,58 +6,17 @@
     <title>Private Gallery</title>
     <style>
         body { 
-            background-color: #333;
             font-family: Arial, sans-serif; 
             text-align: center; 
         }
-        .login-container { 
-            display: none;
-            width: 300px;
-            margin: 100px auto;
-            padding: 20px;
-            background: red;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
+        .login-container, .gallery-container, .upload-container { 
+            display: none; 
         }
-        .login-container h2 { color: #333; }
-        .login-container input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .login-container button:hover {
-            background: #0056b3;
-        }
- 
-        }
-         .gallery-container, .upload-container { display: none; }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-            padding: 20px;
-        }
-        .gallery img, .gallery video {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .gallery img:hover, .gallery video:hover {
-            transform: scale(1.05);
-        }
+        .gallery img, .gallery video { 
+            width: 150px; 
+            height: 100px; 
+            cursor: pointer; 
+            margin: 5px; }
         .modal { 
             display: none; 
             position: fixed; 
@@ -66,17 +25,8 @@
             height: 100%; 
             background: rgba(0,0,0,0.8); 
         }
-        .modal-content { 
-            position: relative; 
-            margin: 10% auto; 
-            padding: 20px; 
-            background: white; 
-        }
-        .close { 
-            position: absolute; 
-            top: 5px; 
-            right: 10px; 
-            cursor: pointer; }
+        .modal-content { position: relative; margin: 10% auto; padding: 20px; background: white; }
+        .close { position: absolute; top: 5px; right: 10px; cursor: pointer; }
     </style>
 </head>
 <body>
