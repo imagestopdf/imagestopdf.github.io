@@ -33,16 +33,24 @@
 
         }
     
-        body h1 {
-            color: #ffff00;
+         body h1 {
+            color: #ffffff;
+            padding: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 30px;
+            font-family: 'JetBrains Mono', monospace;        
+        }
+        body h2 {
+           color: #ffff00;
             padding: 5px;
             margin-left: 10px;
             margin-right: 10px;
             font-size: 25px;
             font-family: 'JetBrains Mono', monospace;        
         }
-        body h2 {
-            color: #0000ff;
+    body h3 { 
+        color: #0000ff;
             font-size: 20px;
             padding: 5px;
             margin-left: 10px;
@@ -173,11 +181,15 @@
             font-color: #ff0000;
             text-align: center;
         }
-        p5 {
+    section h2 {
+        color: #000000;
+    }
+        
+        section p5 {
             color: #ff0000;
             font-size: 20px;
         }
-        P6 {
+        section P6 {
             color: #000000;
             font-size: 20px
         }
@@ -213,7 +225,7 @@
             color: #00ff00;
         }
     
-        /* Comment Box Styles */
+        
 /* Comment Box Styles */
 .comment-box {
     background-color: #00ffff;
@@ -341,131 +353,133 @@
   
         
     <br><br><br>
+    <h1>Introduction to Java, Characteristics Of Java, Applications of Java, Advantages and Disadvantages of Java in hindi</h1>
+     <p>Hello दोस्तो! आज हम इस artical में (Introduction to Java in hindi) के बारें में पढेंगे. इसे बहुत ही simple language में लिखा गया है. उम्मीद करता हूं कि यह article आपको आसानी से समझ मे आ जाएगा. तो चलिए शुरू करते हैं:-</p><br>
     
-   <h1>Introduction to Java</h1>
+   <h2>Introduction to Java</h2>
     <p> Java एक high-level, object-oriented, और platform-independent programming language है, जिसे Sun Microsystems (अब Oracle Corporation का हिस्सा) ने 1995 में develop किया था। Java का मुख्य उद्देश्य "write once, run anywhere" के सिद्धांत पर आधारित है, जिससे कि एक बार लिखे गए Java code को बिना बदलाव के किसी भी platform पर चलाया जा सके। यह language robust (मजबूत), secure (सुरक्षित), और versatile (लचीला) है, जिसका use web development, mobile applications, desktop applications, और enterprise solutions सहित कई प्रकार की applications के लिए किया जाता है.</p>
 
     <p>Java की कुछ प्रमुख विशेषताएँ हैं - simplicity, object-oriented nature, portability, और multithreading support, जो इसे modern applications के लिए ideal बनाती हैं। Java के कोड को bytecode में compile किया जाता है, जिसे Java Virtual Machine (JVM) के माध्यम से किसी भी platform पर execute किया जा सकता है। यही कारण है कि Java platform-independent होती है और इसे दुनिया भर में developers द्वारा पसंद किया जाता है।
 
-<h1>**Characteristics Of Java</h1>
+<h2>Characteristics Of Java</h2>
 <p>Java की मुख्य विशेषताएँ या characteristics इसे एक powerful और widely-used language बनाती हैं। यहाँ Java की कुछ प्रमुख विशेषताएँ दी गई हैं:</p>
 
-<h2>1. **Simple (सरल)</h2>
+<h3>1. Simple (सरल)</h3>
 <p>Java को आसान और user-friendly बनाने के लिए डिज़ाइन किया गया है। यह C++ की complexity (जैसे pointers और operator overloading) को नहीं रखता, जिससे इसे सीखना और समझना आसान होता है.</p>
 
-<h2>2. **Object-Oriented (वस्तु-उन्मुख)</h2>
+<h3>2. Object-Oriented (वस्तु-उन्मुख)</h3>
 <p>Java पूरी तरह से Object-Oriented programming language है। इसमें हर चीज़ को classes और objects में organize किया जाता है, जिससे code को manage और reuse करना आसान होता है.</p>
 
-<h2>3. **Platform-Independent (प्लेटफ़ॉर्म स्वतंत्र)</h2>
+<h3>3. Platform-Independent (प्लेटफ़ॉर्म स्वतंत्र)</h3>
 <p>Java का सबसे बड़ा लाभ इसका platform independence है। एक बार Java में code लिखकर compile करने के बाद, उसे किसी भी platform पर चलाया जा सकता है। यह इसके bytecode और JVM (Java Virtual Machine) की वजह से संभव होता है.</p>
 
-<h2>4. **Secure (सुरक्षित)</h2>
+<h3>4. Secure (सुरक्षित)</h3>
 <p>Java में security का level high है। इसमें built-in security features हैं, जैसे कि bytecode verification और sandboxing, जो इसे network और web आधारित applications के लिए secure बनाते हैं.</p>
 
-<h2>5. **Robust (मजबूत)</h2>
+<h3>5. Robust (मजबूत)</h3>
 <p>Java में automatic garbage collection, exception handling, और memory management के features होते हैं, जिससे यह language बहुत ही stable और reliable बनती है.</p>
 
-<h2>6. **Multithreaded (मल्टीथ्रेडेड)</h2>
+<h3>6. Multithreaded (मल्टीथ्रेडेड)</h3>
 <p>Java multithreading को support करती है, यानी एक साथ कई tasks को execute करना संभव है। यह feature performance और responsiveness बढ़ाने में मदद करता है.</p>
 
-<h2>7. **Distributed (वितरित)</h2>
+<h3>7. Distributed (वितरित)</h3>
 <p>Java distributed computing को support करती है, यानी network पर मौजूद resources का आसानी से use किया जा सकता है। यह RMI (Remote Method Invocation) और EJB (Enterprise JavaBeans) जैसी technologies के माध्यम से संभव होता है.</p>
 
-<h2>8. **Portable (पोर्टेबल)</h2>
+<h3>8. Portable (पोर्टेबल)</h3>
 <p>Java के bytecode और JVM के कारण इसे किसी भी platform पर बिना changes के चलाया जा सकता है, जो इसे portable बनाता है.</p>
 
-<h2>9. **High Performance (उच्च प्रदर्शन)</h2>
+<h3>9. High Performance (उच्च प्रदर्शन)</h3>
 <p>Java में Just-In-Time (JIT) compiler होता है, जो bytecode को machine code में बदलकर program execution को तेज़ बनाता है.</p>
 
-<h2>10. **Dynamic (गतिशील)</h2>
+<h3>10. Dynamic (गतिशील)</h3>
 <p>Java runtime पर classes को load करने की सुविधा देता है, जिससे यह अन्य languages की तुलना में अधिक dynamic बनता है.</p>
 
 
 <p>इन सभी characteristics के कारण Java एक flexible, reliable, और widely-used language है, जो छोटे से लेकर बड़े projects तक के लिए उपयुक्त है.</p>
 
-<h1>**Applications (अनुप्रयोग)</h1>
+<h2>Applications (अनुप्रयोग)</h2>
 <p>Java का use विभिन्न प्रकार की applications के development में होता है। इसकी versatility, security, और platform-independence के कारण यह आज के समय में बहुत सी applications के लिए पसंदीदा language है। यहाँ कुछ प्रमुख प्रकार की applications दी गई हैं जिनमें Java का use होता है:</p>
 
-<h2>1. **Web Applications (वेब एप्लिकेशन)</h2>
+<h3>1. Web Applications (वेब एप्लिकेशन)</h3>
 <p>Java का उपयोग JSP (JavaServer Pages), Servlets, और frameworks (जैसे Spring, Hibernate) के साथ web applications बनाने के लिए किया जाता है। इसके द्वारा बनाए गए web applications scalable और secure होते हैं, जिनका use Banking, E-commerce, और Education क्षेत्र में किया जाता है.</p>
 
-<h2>2. **Mobile Applications (मोबाइल एप्लिकेशन)</h2>
+<h3>2. Mobile Applications (मोबाइल एप्लिकेशन)</h3>
 <p>Java का उपयोग Android app development में प्रमुख रूप से किया जाता है। Android SDK (Software Development Kit) Java के साथ आता है, जिससे Android applications को आसानी से develop और deploy किया जा सकता है.</p>
 
-<h2>3. **Enterprise Applications (एंटरप्राइज एप्लिकेशन)</h2>
+<h3>3. Enterprise Applications (एंटरप्राइज एप्लिकेशन)</h3>
 <p>Java EE (Enterprise Edition) का use बड़े-बड़े enterprise systems और server-based applications को develop करने में किया जाता है। इसमें high-level security, reliability, और scalability होती है, जो Banking, Insurance, और Government Institute में उपयोगी होती है.</p>
 
-<h2>4. **Desktop GUI Applications (डेस्कटॉप GUI एप्लिकेशन)</h2>
+<h3>4. Desktop GUI Applications (डेस्कटॉप GUI एप्लिकेशन)</h3>
 <p>Java का use desktop applications के लिए भी किया जाता है। JavaFX और Swing frameworks की help से user-friendly GUI applications बन सकते हैं। जैसे कि Media Players, Anty virus software, और stock management system.</p>
 
-<h2>5. **Scientific Applications (वैज्ञानिक एप्लिकेशन)</h2>
+<h3>5. Scientific Applications (वैज्ञानिक एप्लिकेशन)</h3>
 <p>Java का use scientific और mathematical calculations वाले applications में भी किया जाता है, जैसे MATLAB, Simulink, आदि। यह language data processing, machine learning, और simulation के लिए उपयुक्त है.</p>
 
-<h2>6. **Gaming Applications (गेमिंग एप्लिकेशन)</h2>
+<h3>6. Gaming Applications (गेमिंग एप्लिकेशन)</h3>
 <p>Java का use Game development में भी किया जाता है, विशेषकर Android Games में। Java में multithreading और socket programming जैसी सुविधाएँ होती हैं जो games को अधिक interactive और responsive बनाती हैं.</p>
 
-<h2>7. **Big Data Technologies (बिग डेटा टेक्नोलॉजीज)</h2>
+<h3>7. Big Data Technologies (बिग डेटा टेक्नोलॉजीज)</h3>
 <p>Java का use Apache Hadoop, Apache Spark, और अन्य big data technologies में किया जाता है, जो large datasets को analyze करने और process करने में help करती हैं.</p>
 
-<h2>8. **Embedded Systems (एम्बेडेड सिस्टम्स)</h2>
+<h3>8. Embedded Systems (एम्बेडेड सिस्टम्स)</h3>
 <p>Java का use छोटे embedded systems, जैसे कि smart cards, set-up box, और अन्य IoT (Internet of Things) devices के लिए किया जाता है। इसकी portability और efficiency इसे embedded systems के लिए ideal बनाती है.</p>
 
-<h2>9. **Cloud-Based Applications (क्लाउड-आधारित एप्लिकेशन)</h2>
+<h3>9. Cloud-Based Applications (क्लाउड-आधारित एप्लिकेशन)</h3>
 <p>Java का use Cloud services और cloud-based applications बनाने में होता है। इसकी scalability और security इसे cloud computing platforms जैसे कि Amazon Web Services (AWS), Google Cloud Platform (GCP), और Microsoft Azure के लिए उपयुक्त बनाती हैं.</p>
 
-<h2>10. **Artificial Intelligence (AI) और Machine Learning (ML)</h2>
+<h3>10. Artificial Intelligence (AI) और Machine Learning (ML)</h3>
 <p>Java का use AI और ML के applications में भी किया जाता है। इसमें ML libraries, जैसे Deeplearning4j और Weka, उपलब्ध हैं, जो machine learning algorithms को implement करने में help करती हैं.</p>
 
 <p>इन सभी applications में Java का use इसे एक powerful और versatile language बनाता है, जो कई अलग-अलग domains और industries में उपयोगी है.</p>
 
-<h1>**Advantages and Disadvantages of Java</h1>
+<h2>Advantages and Disadvantages of Java</h2>
 <p>Java के कई advantages और disadvantages हैं, जो इसे अन्य programming languages से अलग बनाते हैं। आइए इन पर विस्तार से नज़र डालते हैं:</p>
 
-<h1>**Advantages of Java</h1>
-<h2>1. **Platform-Independent (प्लेटफ़ॉर्म स्वतंत्र):</h2>
+<h2>Advantages of Java</h2>
+<h3>1. Platform-Independent (प्लेटफ़ॉर्म स्वतंत्र):</h3>
 <p>Java का सबसे बड़ा फायदा इसका platform independence है। Java code को एक बार लिखने के बाद किसी भी operating system पर बिना बदलाव के चलाया जा सकता है, जो इसे portable बनाता है.</p>
 
-<h2>2. **Object-Oriented (वस्तु-उन्मुख):</h2>
+<h3>2. Object-Oriented (वस्तु-उन्मुख):</h3>
 <p>Java एक पूरी तरह से object-oriented programming language है, जो code को organize और maintain करना आसान बनाती है। इसके concepts जैसे encapsulation, inheritance, और polymorphism कोड के reusability और readability को बढ़ाते हैं.</p>
 
-<h2>3. **Simple and Easy to Learn (सरल और सीखने में आसान):</h2>
+<h3>3. Simple and Easy to Learn (सरल और सीखने में आसान):</h3>
 <p>Java को C++ की तुलना में simple और user-friendly बनाया गया है। इसमें pointers और operator overloading जैसी complex features नहीं हैं, जिससे इसे beginners के लिए आसान बना दिया गया है.</p>
 
-<h2>4. **Robust and Secure (मजबूत और सुरक्षित):</h2>
+<h3>4. Robust and Secure (मजबूत और सुरक्षित):</h3>
 <p>Java automatic garbage collection, exception handling, और memory management के features के साथ आता है, जो इसे stable और reliable बनाते हैं। इसके अलावा, Java में built-in security features हैं, जो इसे network और web-based applications के लिए secure बनाते हैं.</p>
 
-<h2>5. **Multithreaded (मल्टीथ्रेडेड):</h2>
+<h3>5. Multithreaded (मल्टीथ्रेडेड):</h3>
 <p>Java multithreading को support करता है, यानी एक साथ कई tasks को execute कर सकता है। यह feature performance को improve करता है और applications को responsive बनाता है.</p>
 
-<h2>6. **Rich API and Libraries (समृद्ध API और पुस्तकालय):</h2>
+<h3>6. Rich API and Libraries (समृद्ध API और पुस्तकालय):</h3>
 <p>Java में built-in libraries और APIs का बड़ा collection है, जो networking, input-output, utilities, और database connections के लिए उपयोगी होती हैं। इससे developers का काम आसान हो जाता है.</p>
 
-<h2>7. **Distributed Computing (वितरित कम्प्यूटिंग):</h2>
+<h3>7. Distributed Computing (वितरित कम्प्यूटिंग):</h3>
 <p>Java distributed computing को support करता है, जिससे network पर मौजूद resources का आसानी से use किया जा सकता है। इसका RMI (Remote Method Invocation) और CORBA जैसी technologies में use होता है.</p>
 
-<h2>8. **Large Community Support (बड़ा समुदाय समर्थन)**:</h2>
+<h3>8. Large Community Support (बड़ा समुदाय समर्थन):</h3>
 <p>Java के पास एक बड़ा और active community है, जो नए programmers को सहायता प्रदान करता है। इससे coding के दौरान आने वाली problems का solution आसानी से मिल सकता है.</p>
 
-<h1>**Disadvantages of Java</h1>
-<h2>1. **Slower Performance (धीमी गति):</h2>
+<h2>Disadvantages of Java</h2>
+<h3>1. Slower Performance (धीमी गति):</h3>
 <p>Java bytecode को पहले JVM द्वारा machine code में translate किया जाता है, जो इसे C++ जैसी compiled languages से थोड़ा धीमा बनाता है। हालांकि, Just-In-Time (JIT) compiler इस problem को कुछ हद तक solve करता है.</p>
 
-<h2>2. **Memory Consumption (मेमोरी खपत):</h2>
+<h3>2. Memory Consumption (मेमोरी खपत):</h3>
 <p>Java में automatic garbage collection और memory management features के कारण memory consumption अधिक होती है। यह large applications में performance को प्रभावित कर सकता है.</p>
 
-<h2>3. **No Low-Level Programming (लो-लेवल प्रोग्रामिंग नहीं):</h2>
+<h3>3. No Low-Level Programming (लो-लेवल प्रोग्रामिंग नहीं):</h3>
 <p>Java में pointers जैसी low-level programming की कमी होती है, जिससे इसे hardware और embedded programming के लिए कम उपयुक्त माना जाता है.</p>
 
-<h2>4. **Complex GUI Development (जटिल GUI विकास):</h2>
+<h3>4. Complex GUI Development (जटिल GUI विकास):</h3>
 <p>Java में GUI development के लिए Swing और JavaFX का use किया जाता है, जो अन्य frameworks जैसे कि JavaScript के React, Angular, या C# के WPF की तुलना में थोड़ा complex और outdated हो सकता है.</p>
 
-<h2>5. **Verbosity (विस्तार):</h2>
+<h3>5. Verbosity (विस्तार):</h3>
 <p>Java में code लिखना अन्य languages के मुकाबले verbose (लंबा और अधिक विस्तार) होता है। छोटे कामों के लिए भी अधिक code लिखने की आवश्यकता होती है, जिससे readability पर असर पड़ सकता है.</p>
 
-<h2>6. **High Memory and CPU Usage (अधिक मेमोरी और CPU उपयोग):</h2>
+<h3>6. High Memory and CPU Usage (अधिक मेमोरी और CPU उपयोग):</h3>
 <p>Java applications में garbage collection के कारण high memory और CPU usage होती है, जो बड़ी applications और gaming applications में समस्या बन सकती है.</p>
 
-<h2>7. **Commercial Licensing for Some Versions (कुछ संस्करणों के लिए लाइसेंसिंग शुल्क)</h2>
+<h3>7. Commercial Licensing for Some Versions (कुछ संस्करणों के लिए लाइसेंसिंग शुल्क)</h3>
 <p>Oracle के कुछ Java versions के लिए commercial use पर licensing fees लागू होती है, जो enterprise users के लिए एक अतिरिक्त खर्चा बन सकता है.</p>
 
     <section>
@@ -562,7 +576,7 @@
 </script>
        
     <footer>
-        <p><small>&copy; 2024 Deepanshu Ranjan. All rights reserved.</small></p>
+        <p><small>&copy; 2025 Deepanshu Ranjan. All rights reserved.</small></p>
     </footer>
 </body>
 </html>
