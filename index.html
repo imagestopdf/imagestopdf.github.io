@@ -149,12 +149,17 @@
     
 }
         /* Image container */
-   .image-container {
-  width: 100%;  /* Image ko screen ke full width tak stretch karega */
-  height: auto; /* Aspect ratio ko maintain karega */
-  display: block; /* Extra space remove karega */
-  max-width: 500px; 
-  height: auto;
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  @media (max-width: 600px) {
+    img {
+      max-width: 300px;
+    }
+  }
 }  
   
         /* Section Styling */
@@ -273,7 +278,7 @@
  
     <br>
     
-    <div class="image-container">
+    <div class="img">
         <img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg" alt="Motivation"><br>
     </div>
     
