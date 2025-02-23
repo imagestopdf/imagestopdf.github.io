@@ -3,58 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Private Gallery</title>
+    <meta name="description" content="Private page for nphstudy admins">
+    <meta name="keywords" content="nphstudy private page, private page of nphstudy">
+    <meta name="nphstudy" content="NPHstudy">
+    <title>Private Page of NPHstudy</title>
     <style>
         body { 
-            font-family: Arial, sans-serif; 
+            font-family: Arial, sans-serif;
+            background-color: #3333;            
+            width: fix;
             text-align: center; 
         }
-        .login-container, .gallery-container, .upload-container { 
-            display: none; 
+       .login-container {
+            background: #3333;
+            width: fix;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
+
+        label {
+            display: block;
+            margin: 10px 10px;
+        }
+
+        input {
+            width: fix;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        button {
+            width: fix;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: #00ff00;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+    .gallery-container {
+        display: none;
+    }
+    .upload-container {
+        display: none;
+    }
         .gallery img, .gallery video { 
-            width: 150px; 
+            width: 100px; 
             height: 100px; 
             cursor: pointer; 
-            margin: 5px; }
+            margin: 5px; 
+        }
+    .gallery video {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        margin: 5px;
+    }
         .modal { 
             display: none; 
             position: fixed; 
-            top: 0; left: 0; 
+            top: 20px; 
+            left: 0; 
             width: 100%; 
             height: 100%; 
             background: rgba(0,0,0,0.8); 
         }
-        .modal-content { position: relative; margin: 10% auto; padding: 20px; background: white; }
-        .close { position: absolute; top: 5px; right: 10px; cursor: pointer; }
+        .modal-content { 
+            position: relative; 
+            margin: 10px; 
+            padding: 2px; 
+            width: auto;
+            margin-top: 40px;
+            background: none; 
+        }
+        .close { 
+            position: relative;
+            margin: 30px;
+            padding: 30px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            color: blue;
+            width: 10px;
+            justify-content: left;
+            background: red;
+            cursor: pointer
+                        
+            
+        }
     </style>
 </head>
 <body>
+    <br><br>
     <div class="login-container">
+        <h1 style="color: red; ">This section only for expected persons</h1>
         <h2>Login</h2>
-        <input type="text" id="username" placeholder="Username"><br>
-        <input type="password" id="password" placeholder="Password"><br>
+        <input type="text" id="username" placeholder="Username"><br><br>
+        <input type="password" id="password" placeholder="Password"><br><br>
         <button onclick="login()">Login</button>
     </div>
     
     <div class="gallery-container">
-        <h2>Gallery</h2>
+        <h2>This Gallery Develop by Deepanshu ranjan. No one can see this gallery.</h2>
         <div class="gallery" id="gallery"></div>
-        <button id="adminUpload" onclick="showUploadPrompt()">Upload</button>
+        <button id="adminUpload" onclick="showUploadPrompt()">Upload</button><br>
         <button onclick="logout()">Logout</button>
-    </div>
+    </div><br>
 
     <div class="modal" id="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="modal-content" id="modal-content"></div>
+        <span class="close" onclick="closeModal()">&times;</span><br><br>
+        <div class="modal-content" id="modal-content">close</div>
     </div>
 
     <div class="upload-container">
         <h2>Admin Upload</h2>
-        <input type="password" id="adminPass" placeholder="Admin Password"><br>
-        <input type="file" id="uploadFiles" multiple><br>
-        <button onclick="uploadFiles()">Upload</button>
-        <button onclick="cancelUpload()">Cancel</button>
+        <input type="password" id="adminPass" placeholder="Admin Password"><br><br>
+        <input type="file" id="uploadFiles" multiple><br><br>
+        <button onclick="uploadFiles()">Upload</button><br><br>
+        <button onclick="cancelUpload()">Cancel</button><br><br>
     </div>
   
   <script>
@@ -124,7 +197,7 @@
             let modalContent = document.getElementById("modal-content");
             modalContent.innerHTML = "";
             let clone = element.cloneNode(true);
-            clone.style.width = "90%";
+            clone.style.width = "50%";
             modalContent.appendChild(clone);
             modal.style.display = "block";
         }
@@ -132,6 +205,9 @@
         function closeModal() {
             document.getElementById("modal").style.display = "none";
         }
+    function close() {
+       let model = document.getElementById("close");
+    }
     </script>
 </body>
 </html>
