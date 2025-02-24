@@ -280,11 +280,17 @@
             <p><a href="https://www.instagram.com/deepanshuranjan80?igsh=dHhmOGR0cmZxaGRi" target="_blank">Instagram</a></p>
         </section>
             <br><br>
-
-<script>
- function toggleMenu() {
+ <script>
+function toggleMenu() {
     const menu = document.getElementById('menu');
+    const hamburger = document.querySelector('.hamburger-icon');
     menu.classList.toggle('active');
+    
+    if (menu.classList.contains('active')) {
+        hamburger.innerHTML = '&#10006;'; // Cross icon (X)
+    } else {
+        hamburger.innerHTML = '&#9776;'; // Three lines icon
+    }
 }
 </script>
        
