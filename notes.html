@@ -16,9 +16,10 @@
            }
     
         body p { 
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Poppins', sans-serif;
             background-color: #000000;
             font-size: 25px;
+            font-align: justify;
             width: 100% fix;
             padding: 10px;
             margin-left: 10px;
@@ -217,9 +218,9 @@
      .box {
     background-color: red;
     width: fix;
-    padding: 20px;
+    padding: 0px;
     border: 2px solid #0000ff;
-    border-radius: 30px;
+    border-radius: 0px;
     box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
     text-align: left;
     
@@ -228,6 +229,10 @@
     color: yellow;
     text-align: center;     
     }
+        .box h2 {
+            color: blue;
+            font-size: 15px;
+        }
        
     li {
         color: yellow;
@@ -410,9 +415,16 @@
 </section>
 
 <script>
- function toggleMenu() {
+function toggleMenu() {
     const menu = document.getElementById('menu');
+    const hamburger = document.querySelector('.hamburger-icon');
     menu.classList.toggle('active');
+    
+    if (menu.classList.contains('active')) {
+        hamburger.innerHTML = '&#10006;'; // Cross icon (X)
+    } else {
+        hamburger.innerHTML = '&#9776;'; // Three lines icon
+    }
 }
 
     let isAdmin = false; // एडमिन लॉगिन स्टेटस
