@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +38,7 @@
     
        body h1 {
             color: #ffffff;
-            padding: 5px;
+            padding: 10px;
             margin-left: 10px;
             margin-right: 10px;
             font-size: 30px;
@@ -47,7 +46,7 @@
         }
         body h2 {
            color: #ffff00;
-            padding: 5px;
+            padding: 10px;
             margin-left: 10px;
             margin-right: 10px;
             font-size: 25px;
@@ -56,12 +55,24 @@
     body h3 { 
         color: #0000ff;
             font-size: 20px;
-            padding: 5px;
+            padding: 10px;
             margin-left: 10px;
             margin-right: 10px;
             font-weight: bold;
             font-family: 'JetBrains Mono', monospace;
         }
+    .fixed-right {
+    position: fixed;
+    right: 20px;
+    top: 50px;
+}
+  
+  .fixed-text {
+    width: fix;  /* Yeh width define karega, jitni chahiye utni rakh sakte hain */
+    margin: 0 auto;  /* Yeh text ko center me le aayega aur left-right equal banayega */
+    text-align: justify; /* Yeh text ko dono side se properly align karega */
+    margin-right: 10px;
+}
         p3 {
             color: #ffffff;
             font-size: 20px;
@@ -365,9 +376,10 @@
         <nav id="menu" class="menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="notes.html">Notes</a></li>
                 <li><a href="term_&_conditions.html">Term & Conditions</a></li>
             </ul>
         </nav>
@@ -393,118 +405,118 @@
     
     <h2 id="target-section">Introduction to PHP</h2>
     <ul>
-<li><p>PHP का पूरा नाम Hypertext Preprocessor है। लेकिन इसको Personal Home Page भी कहते है.</p></li>
-<li><p>PHP एक open source तथा server side scripting language है इसको HTML के साथ use में लाया जा सकता है.</p></li>
-<li><p>इस language का इस्तेमाल website और application को बनाने के लिए किया जाता है। इसके साथ-साथ इसका प्रयोग dynamic web page create करने के लिए भी किया जाता है.</p></li>
-<Li><p>इसे वर्ष 1994 में Rasmus Lerdorf के द्वारा develop किया गया था और वर्ष 1995 में launch किया गया था.</p></li>
-<li><p>PHP Language का प्रयोग web development में किया जाता है जिससे कि हम dynamic web page का निर्माण करते है तथा इसके द्वारा database, तथा e-commerce website को create किया जाता है.</p></li>
-<li><p>PHP को हम free में download करके use कर सकते है.</p></li>
-<li><p>PHP एक simple language है और इस language को सीखना काफी आसान है.</p></li>
-<li><p>दूसरी scripting language की तुलना में PHP काफी fast language है। इस language को object-oriented के नाम से भी जाना जाता है। इस language को HTML में जोड़ा जा सकता है.</p></li>
-<li><p>PHP लगभग सभी servers के साथ compatible होती है। अर्थात इसको सभी प्रकार के server के साथ काम में लाया जा सकता है.</p></li>
-<li><p>PHP language को बहुत सारें platform में run कर सकते है जैसे:- Windows, Linux, Unix etc.</p></li>
-<li><p>PHP file के .PHP, .PHP3, या .PHTML extension होते है.</p></li>
+<li><p class="fixed-text">PHP का पूरा नाम Hypertext Preprocessor है। लेकिन इसको Personal Home Page भी कहते है.</p></li>
+<li><p class="fixed-text">PHP एक open source तथा server side scripting language है इसको HTML के साथ use में लाया जा सकता है.</p></li>
+<li><p class="fixed-text">इस language का इस्तेमाल website और application को बनाने के लिए किया जाता है। इसके साथ-साथ इसका प्रयोग dynamic web page create करने के लिए भी किया जाता है.</p></li>
+<Li><p class="fixed-text">इसे वर्ष 1994 में Rasmus Lerdorf के द्वारा develop किया गया था और वर्ष 1995 में launch किया गया था.</p></li>
+<li><p class="fixed-text">PHP Language का प्रयोग web development में किया जाता है जिससे कि हम dynamic web page का निर्माण करते है तथा इसके द्वारा database, तथा e-commerce website को create किया जाता है.</p></li>
+<li><p class="fixed-text">PHP को हम free में download करके use कर सकते है.</p></li>
+<li><p class="fixed-text">PHP एक simple language है और इस language को सीखना काफी आसान है.</p></li>
+<li><p class="fixed-text">दूसरी scripting language की तुलना में PHP काफी fast language है। इस language को object-oriented के नाम से भी जाना जाता है। इस language को HTML में जोड़ा जा सकता है.</p></li>
+<li><p class="fixed-text">PHP लगभग सभी servers के साथ compatible होती है। अर्थात इसको सभी प्रकार के server के साथ काम में लाया जा सकता है.</p></li>
+<li><p class="fixed-text">PHP language को बहुत सारें platform में run कर सकते है जैसे:- Windows, Linux, Unix etc.</p></li>
+<li><p class="fixed-text">PHP file के .PHP, .PHP3, या .PHTML extension होते है.</p></li>
     </ul>
     
         <h2 id="target-section1">How PHP work</h2>
         
     <ul>
-        <li><p>जब कोई user browser में URL डालता है (जैसे `https://example.com/index.php`), तो यह web server को एक HTTP request भेजता है.</p></li>  
-    <li><p>Server request को process करता है और देखता है कि file में `.php` extension है या नहीं.</p></li>
-<li><p>यदि file PHP script वाली होती है, तो server इसे PHP interpreter को भेजता है.</p></li>
-<li><p>PHP interpreter script को process करता है, जिसमें calculation, file access, या database से डेटा प्राप्त करना शामिल हो सकता है.</p></li>
-<li><p>PHP कोड HTML के रूप में output देता है, जिसे browser में भेजने के लिए तैयार किया जाता है.</p></li>
-<li><p>Process की गई HTML webpage के रूप में client (user के browser) को भेजी जाती है.</p></li>
-<li><p>Browser प्राप्त किए गए HTML को display करता है, जिससे user को web page दिखता है. </p></li>
-<li><p>PHP आवश्यकतानुसार MySQL, PostgreSQL, या अन्य database से data प्राप्त करता या store करता है.</p></li>  
-<li><p>PHP script client को नहीं दिखती, सिर्फ उसका output (HTML) ही user को मिलता है, जिससे security बनी रहती है.</p></li>  
-<li><p>PHP session (`$_SESSION`) और cookies (`$_COOKIE`) के माध्यम से user data को track कर सकता है.</p></li>
-<li><p>PHP errors को handle कर सकता है और उन्हें log कर सकता है ताकि user को न दिखे, लेकिन developers इसे debug कर सके. </p></li>  
-<li><p>PHP, HTML, CSS, JavaScript और AJAX के साथ मिलकर काम कर सकता है.</p></li>
-<li><p>PHP के लिए Laravel, CodeIgniter जैसे framework और WordPress, Joomla जैसे CMS उपलब्ध हैं.</p></li>  
-<li><p>PHP in build security features प्रदान करता है, जो SQL injection, XSS, और CSRF attacks को रोकते हैं.</p></li>  
-<li><p>PHP script को web hosting server पर upload किया जाता है, जिसमें PHP और Apache/Nginx जैसे web server install होते हैं.</p></li>  
-<li><p>PHP windows, linux और macOS servers पर चलता है और विभिन्न database और web server के साथ संगत है.</p></li>
+        <li><p class="fixed-text">जब कोई user browser में URL डालता है (जैसे `https://example.com/index.php`), तो यह web server को एक HTTP request भेजता है.</p></li>  
+    <li><p class="fixed-text">Server request को process करता है और देखता है कि file में `.php` extension है या नहीं.</p></li>
+<li><p class="fixed-text">यदि file PHP script वाली होती है, तो server इसे PHP interpreter को भेजता है.</p></li>
+<li><p class="fixed-text">PHP interpreter script को process करता है, जिसमें calculation, file access, या database से डेटा प्राप्त करना शामिल हो सकता है.</p></li>
+<li><p class="fixed-text">PHP कोड HTML के रूप में output देता है, जिसे browser में भेजने के लिए तैयार किया जाता है.</p></li>
+<li><p class="fixed-text">Process की गई HTML webpage के रूप में client (user के browser) को भेजी जाती है.</p></li>
+<li><p class="fixed-text">Browser प्राप्त किए गए HTML को display करता है, जिससे user को web page दिखता है. </p></li>
+<li><p class="fixed-text">PHP आवश्यकतानुसार MySQL, PostgreSQL, या अन्य database से data प्राप्त करता या store करता है.</p></li>  
+<li><p class="fixed-text">PHP script client को नहीं दिखती, सिर्फ उसका output (HTML) ही user को मिलता है, जिससे security बनी रहती है.</p></li>  
+<li><p class="fixed-text">PHP session (`$_SESSION`) और cookies (`$_COOKIE`) के माध्यम से user data को track कर सकता है.</p></li>
+<li><p class="fixed-text">PHP errors को handle कर सकता है और उन्हें log कर सकता है ताकि user को न दिखे, लेकिन developers इसे debug कर सके. </p></li>  
+<li><p class="fixed-text">PHP, HTML, CSS, JavaScript और AJAX के साथ मिलकर काम कर सकता है.</p></li>
+<li><p class="fixed-text">PHP के लिए Laravel, CodeIgniter जैसे framework और WordPress, Joomla जैसे CMS उपलब्ध हैं.</p></li>  
+<li><p class="fixed-text">PHP in build security features प्रदान करता है, जो SQL injection, XSS, और CSRF attacks को रोकते हैं.</p></li>  
+<li><p class="fixed-text">PHP script को web hosting server पर upload किया जाता है, जिसमें PHP और Apache/Nginx जैसे web server install होते हैं.</p></li>  
+<li><p class="fixed-text">PHP windows, linux और macOS servers पर चलता है और विभिन्न database और web server के साथ संगत है.</p></li>
     </ul>
     
     <h2 id="features-of-php">Features of PHP</h2>
     <ul>
-        <li><p>PHP (Hypertext Preprocessor) एक server-side scripting language है जो web development के लिए उपयोग की जाती है. यह एक powerful language है जिसे dynamic और interactive web page बनाने के लिए design किया गया है. आइए PHP की Main Features (विशेषताओं) को विस्तार से समझते हैं:</p></li>
+        <li><p class="fixed-text">PHP (Hypertext Preprocessor) एक server-side scripting language है जो web development के लिए उपयोग की जाती है. यह एक powerful language है जिसे dynamic और interactive web page बनाने के लिए design किया गया है. आइए PHP की Main Features (विशेषताओं) को विस्तार से समझते हैं:</p></li>
     </ul>
     
     <h3>1. Open Source & Free </h3>
     <ul>
-        <li><p>PHP एक open source language है, जिसका अर्थ है कि इसे कोई भी free में download और use कर सकता है. इसके source code को आवश्यकतानुसार change किया जा सकता है. </p></li>
+        <li><p class="fixed-text">PHP एक open source language है, जिसका अर्थ है कि इसे कोई भी free में download और use कर सकता है. इसके source code को आवश्यकतानुसार change किया जा सकता है. </p></li>
     </ul>
     
     <h3>2. Platform Independent</h3>
         <ul>
-            <li><p>PHP को Windows, Linux, macOS आदि किसी भी operating system पर चलाया जा सकता है. यह विभिन्न servers जैसे Apache, Nginx, IIS आदि के साथ भी संगत है.</p></li>
+            <li><p class="fixed-text">PHP को Windows, Linux, macOS आदि किसी भी operating system पर चलाया जा सकता है. यह विभिन्न servers जैसे Apache, Nginx, IIS आदि के साथ भी संगत है.</p></li>
     </ul>
     
     <h3>3. Server-Side Scripting </h3>
         <ul>
-            <li><p>PHP एक server-side scripting language है, जिसका मतलब है कि इसका code server पर run होता है और output HTML के रूप में browser को भेजा जाता है. इससे website अधिक secure और fast बनती है.</p></li>
+            <li><p class="fixed-text">PHP एक server-side scripting language है, जिसका मतलब है कि इसका code server पर run होता है और output HTML के रूप में browser को भेजा जाता है. इससे website अधिक secure और fast बनती है.</p></li>
         </ul>
             
     <h3>4. Dynamic & Interactive Web Pages</h3>
         <ul>
-            <li><p>PHP का उपयोग करके dynamic web page बनाए जा सकते हैं, जो user input के आधार पर content को बदल सकते हैं. जैसे – login system, form handling, e-commerce website आदि.</p></li>
+            <li><p class="fixed-text">PHP का उपयोग करके dynamic web page बनाए जा सकते हैं, जो user input के आधार पर content को बदल सकते हैं. जैसे – login system, form handling, e-commerce website आदि.</p></li>
     </ul>
     
     <h3>5. Easy to Learn & Use</h3>
         <ul>
-            <li> <p>PHP का syntax बहुत आसान और C, C++ व Java जैसी अन्य languages से मिलता-जुलता है. इसके कारण इसे सीखना और उपयोग करना आसान है.</p></li>
+            <li><p class="fixed-text">PHP का syntax बहुत आसान और C, C++ व Java जैसी अन्य languages से मिलता-जुलता है. इसके कारण इसे सीखना और उपयोग करना आसान है.</p></li>
     </ul>
     
     <h3>6. Database Support</h3>
         <ul>
-            <li><p>PHP विभिन्न database जैसे MySQL, PostgreSQL, Oracle, MongoDB आदि को support करता है, जिससे data को आसानी से store और manage किया जा सकता है.</p></li>
+            <li><p class="fixed-text">PHP विभिन्न database जैसे MySQL, PostgreSQL, Oracle, MongoDB आदि को support करता है, जिससे data को आसानी से store और manage किया जा सकता है.</p></li>
         </ul>
     
     <h3>7. High Performance & Speed</h3>
         <ul>
-            <li><p>PHP अन्य scripting language की तुलना में fast है, क्योंकि यह server पर कम load डालता है और कम time में output generate करता है.</p></li>
+            <li><p class="fixed-text">PHP अन्य scripting language की तुलना में fast है, क्योंकि यह server पर कम load डालता है और कम time में output generate करता है.</p></li>
     </ul>
     
     <h3>8. Security Features</h3>
         <ul>
-            <li><p>PHP में कई security features शामिल हैं, जैसे – SQL Injection, Cross-Site Scripting (XSS), और Cross-Site Request Forgery (CSRF) से security के लिए in built function.</p></li>
+            <li><p class="fixed-text">PHP में कई security features शामिल हैं, जैसे – SQL Injection, Cross-Site Scripting (XSS), और Cross-Site Request Forgery (CSRF) से security के लिए in built function.</p></li>
     </ul>
     
     <h3>9. Large Community Support</h3>
         <ul>
-            <li><p>PHP की एक large community है, जिससे कोई भी developer आसानी से सहायता प्राप्त कर सकता है। Online कई forms, tutorials और documentation उपलब्ध हैं.</p></li>
+            <li><p class="fixed-text">PHP की एक large community है, जिससे कोई भी developer आसानी से सहायता प्राप्त कर सकता है। Online कई forms, tutorials और documentation उपलब्ध हैं.</p></li>
     </ul>
     
     <h3>10. Multiple Framework Support</h3>
         <ul>
-            <li><p>PHP कई popular framework को support करता है, जैसे – Laravel, CodeIgniter, Symfony, Zend, Yii, CakePHP आदि, जो development को fast और simple बनाते हैं.</p></li>
+            <li><p class="fixed-text">PHP कई popular framework को support करता है, जैसे – Laravel, CodeIgniter, Symfony, Zend, Yii, CakePHP आदि, जो development को fast और simple बनाते हैं.</p></li>
     </ul>
     
     <h3>11. Object-Oriented Programming - OOPs</h3>
         <ul>    
-        <li><p>PHP में OOPs features मौजूद हैं, जिससे बड़े और modular projects को आसानी से develop किया जा सकता है.</p></li>
+        <li><p class="fixed-text">PHP में OOPs features मौजूद हैं, जिससे बड़े और modular projects को आसानी से develop किया जा सकता है.</p></li>
     </ul>
     
     <h3>12. File Handling</h3>
         <ul>
-            <li><p>PHP में files को read, write, open, close करने और delete करने के लिए कई inbuilt functions होते हैं. यह features वेबसाइट पर file uploading और downloading में मदद करता है.</p></li>
+            <li><p class="fixed-text">PHP में files को read, write, open, close करने और delete करने के लिए कई inbuilt functions होते हैं. यह features वेबसाइट पर file uploading और downloading में मदद करता है.</p></li>
     </ul>
     
     <h3>13. Multi-Threading Support</h3>
         <ul>    
-        <li><p>PHP एक समय में कई task को संभाल सकता है, जिससे यह high performance web application के लिए उपयुक्त बनता है.</p></li>
+        <li><p class="fixed-text">PHP एक समय में कई task को संभाल सकता है, जिससे यह high performance web application के लिए उपयुक्त बनता है.</p></li>
     </ul>
     
     <h3>14. Code Reusability</h3>
         <ul>    
-        <li><p>PHP में code को विभिन्न modules और functions में विभाजित किया जा सकता है, जिससे code को बार-बार उपयोग करना आसान हो जाता है.</p></li>
+        <li><p class="fixed-text">PHP में code को विभिन्न modules और functions में विभाजित किया जा सकता है, जिससे code को बार-बार उपयोग करना आसान हो जाता है.</p></li>
         </ul>
     
     <h3>15. Web Services & API Integration</h3>
         <ul>
-        <li><p>PHP RESTful और SOAP web services को support करता है, जिससे अन्य application के साथ आसानी से data का आदान-प्रदान किया जा सकता है.</p></li>      
+        <li><p class="fixed-text">PHP RESTful और SOAP web services को support करता है, जिससे अन्य application के साथ आसानी से data का आदान-प्रदान किया जा सकता है.</p></li>      
         </ul>
     </ul>
         <br><br>
