@@ -1,0 +1,683 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hello दोस्तों! आप हमारे इस वेबसाइट से अपनी GK की तैयारी कर सकते है. आपको नीचे एक Question होगा और 4 options दिए गए है आपको opton को choose करना है और next बटन पर click करना है. ">
+    <meta name="keywords" content="gk online test, online gk test in hindi, gk online test in hindi, gk questions in hindi">
+    <meta name="author" content="Deepanshu ranjan">
+    <title>GK online test in hindi</title>
+    <style>
+             
+    /* Basic Styling */
+        * {
+            margin: 10;
+            padding: 20;
+            box-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #000000;
+            width: fix;
+            padding: 0;
+            margin: 0;
+            color: #ffffff;
+            box-size: 30px;
+        }
+   
+        .container { 
+          width: fix; /* Mobile के लिए ज्यादा width */
+    max-width: 600px; /* Desktop पर ज्यादा चौड़ा न हो */
+    margin: auto; /* Center में लाने के लिए */
+    padding: 20px;
+    border: 5px solid blue;
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+          color: yellow;
+          text-align: center;
+        }
+  .container h1 {
+    color: white;
+    margin-bottom: 1px;
+    text-align: center;
+    font-size: 25px;
+  }
+        .options {
+    display: flex;
+    flex-direction: column; /* Buttons को ऊपर-नीचे (column) में रखेगा */
+    align-items: center; /* Center में लाने के लिए */
+    gap: 10px; /* Buttons के बीच gap */
+}
+.options button {
+    width: 90%; /* Buttons को थोड़ा चौड़ा करें */ 
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+        .selected { 
+          background-color: yellow; 
+        }
+        #nextBtn { 
+          display: none;
+          width: 50%;
+          background-color: green;
+          color: yellow;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          display: block;
+          margin: 10px auto; 
+             }
+  #quizContainer { 
+          display: none; 
+          background-color: ;
+          text-align: center;
+          margin: 2px;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          width: 50%;
+          margin: 20px auto;
+          margin-top: 10px; 
+          cursor: pointer;
+  }
+    #startBtn {
+        display: flex;
+        color: black;
+        background: red;
+        justify-content: center;
+          align-items: center;
+          padding: 10px;
+          width: 50%;
+          margin: 20px auto;
+          margin-top: 10px; 
+          cursor: pointer;
+    }
+        
+        #timer { 
+          font-size: 15px; 
+          margin: 10px 0; 
+          color: red; 
+          text-align: right;
+        }
+        #questionNumber { 
+          font-size: 15px; 
+        }
+    
+        body p { 
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            font-size: 17px;
+            text-align: jsutify;
+            width: 100% fix;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
+    
+       body h1 {
+            color: #ffffff;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 30px;
+            font-family: 'JetBrains Mono', monospace;        
+        }
+        body h2 {
+           color: #ffff00;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 25px;
+            font-family: 'JetBrains Mono', monospace;        
+        }
+    body h3 { 
+        color: red;
+            font-size: 20px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-weight: bold;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        p3 {
+            color: #ffffff;
+            font-size: 20px;
+            font-family: 'Sans-serif', Verdana;
+        }
+        p4 {
+            color: #ffffff;
+            font-size: 17px;
+            font-family: 'Sans-serif', Verdana;
+        }
+
+        header {
+            font-family: 'Monospace', Courier;
+            background-color: #000000;
+           
+            text-align: center;
+        }
+        header h1 {
+            font-family: 'Serif', Times New Roman;
+            font-size: 35px;
+            color: #FFFF00;
+        }  
+        header h2 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 26px;
+            color: blue;
+        }
+        header p1 {
+            font-family: 'Serif', Times New Roman;
+            font-size: 28px;
+            color: red;
+        }    
+        
+    /* menu container*/
+          .menu-container {
+            position: relative;
+            width: fix;
+            color: #000000;
+            background-color: #0000ff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #3f3fff;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .menu a {
+                display: block;
+                padding: 12px;
+            }
+        }
+
+
+            section {
+            padding: 20px;
+            width: fix;
+            background-color: #00ff00;
+            font-color: #ff0000;
+            text-align: center;
+        }
+    section h2 {
+        color: #000000;
+    }
+        p5 {
+            color: #ff0000;
+            font-size: 20px;
+        }
+        P6 {
+            color: #000000;
+            font-size: 20px
+        }
+
+        h5 {
+            color: #ffff00;
+            font-size: 40px;
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+
+        footer {
+            background-color: #575757;
+            bottom: 0;
+        }
+        footer p {
+            background-color: #575757;
+            font-size: small;
+            color: #ffff;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+        }
+    
+        ul {
+            color: #00ff00;
+        }
+    table {
+            width: 90%;
+            display: flex;
+            background-color: black;
+            justify-content: center;
+            margin: 20px;
+            border-collapse: collapse;
+        }
+        th {
+            border: 2px solid yellow;
+            padding: 8px;
+            text-align: center;
+            color: red;
+            font-size: 20px;
+        }            
+        td {
+            border: 2px solid yellow;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #000000;
+        }
+
+    
+/* Comment Box Styles */
+.comment-box {
+    background-color: #00ffff;
+    padding: 10px;
+    border-top: 4px solid #0000ff;
+    border-bottom: 4px solid #0000ff;
+    border-right: 4px solid #0000ff;
+    border-left: 4px solid #0000ff;
+}
+
+.comment-box h2 {
+    color: #0000ff;
+    padding: 0;
+    font-size: 25px;
+}
+
+.comment-box form {
+    display: flex;
+    margin: 20px:
+    width: 100%;
+    flex-direction: column;
+}
+
+.comment-box label {
+    margin-top: 10px;
+    color: #000000;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.comment-box input,
+.comment-box textarea {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.comment-box textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.comment-box button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #0fff00;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    border: 5px;;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-box button:hover {
+    background-color: #ff0000;
+}
+    .comments-list {
+            margin-top: 20px;
+        }
+
+        .comment-item {
+            background-color: #e9ecef;
+            color: #000000;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        /* Mobile-specific adjustments */
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 28px;
+            }
+            header h2 {
+                font-size: 22px;
+            }
+            header p1 {
+                font-size: 24px;
+            }
+            .comment-box {
+                padding: 15px;
+            }
+            .comment-box h2 {
+                font-size: 22px;
+            }
+            .comment-box button {
+                font-size: 18px;
+            }
+            section {
+                padding: 10px;
+            }
+            p5, p6 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Welcome to nphstudy.com</h1>
+        <h2> This web is develop by</h2>
+        <p1> Deepanshu Ranjan</p1>
+        
+    </header>
+    <br>
+
+     <div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="term_&_conditions.html">Term & Conditions</a></li>
+            </ul>
+        </nav>
+    </div>
+       <br><br><br>
+<body>
+    <p>Hello दोस्तों! आप हमारे इस वेबसाइट से अपनी GK की तैयारी कर सकते है. आपको नीचे एक Question होगा और 4 options दिए गए है आपको opton को choose करना है और next बटन पर click करना है. आपको 20 Question दिए गए है. और जब आप सब questions को कर लेगे तो आप अपना तुरंत ही final result देख सकते है और अगर आप और question को attampt karna चाहते है तो नीचे अगले page's पर जा कर test दे सकते है. </p><br><br>
+    <div class="container" id="startContainer">
+        <h1>Click on start button to start the test</h1>
+        <button id="startBtn" onclick="startTest()">Start Test</button>
+    </div>
+
+    <div class="container" id="quizContainer">
+        <h2 id="questionNumber"></h2>
+        <h1 id="question">Loading...</h1>
+        <p id="timer">Time Left: 60s</p>
+        <div class="options" id="options"></div>
+        <button id="nextBtn" onclick="nextQuestion()">Next</button>
+    </div>
+    
+    <div class="container" id="resultContainer" style="display: none;">
+        <p id="scoreDisplay">Final Score: <span id="score">0</span></p>
+        <p id="correctCount"></p>
+        <p id="wrongCount"></p>
+        <button id="nextPageBtn" onclick="goToNextPage()">Go to Next Section</button>
+    </div><br><br>
+
+    <table>
+        <tr>
+            <th><a href="#page1">Page 1</a></th>
+            <th><a href="#page2">Page 2</a></th>
+            <th><a href="#page3">Page 3</a></th>
+            <th><a href="#page4">Page 4</a></th>
+            <th><a href="#page5">Page 5</a></th>
+        </tr>
+    </table><br><br>
+    
+<div class="comment-box">
+    <h2>Please Write your comment &#128071;</h2><br>
+    <form onsubmit="addComment(event)">
+        <label for="name"> Name: </label>
+        <input type="text" id="nameInput" placeholder="Enter Your Name" required><br>
+        <label for="comment"> Comment: </label>
+        <textarea id="commentInput" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Post Comment</button>
+    </form>
+</div>
+    <br>
+     <!-- Admin Login -->
+<button style="background-color: black; padding: 0px; border: none;" onclick="adminLogin()">Admin Login</button>
+<p id="adminStatus" style="color: red;"></p>
+    
+<section class="comments-list" id="commentsList">
+    <h2>All Comments:</h2>
+</section>
+
+ <script>
+       
+        const questions = [
+            { question: "विश्व में सबसे अधिक बोली जाने वाली भाषा कौन सी है?", options: ["अंग्रेज़ी", "स्पैनिश", "हिन्दी", "मंदारिन"], correct: 3 },
+  { question: "ओपेरा हाउस किस देश में स्थित है?", options: ["इटली", "ऑस्ट्रेलिया", "फ्रांस", "अमेरिका"], correct: 1 },
+  { question: "प्रसिद्ध एफिल टॉवर कहाँ स्थित है?", options: ["इटली", "स्पेन", "फ्रांस", "जर्मनी"], correct: 2 },
+  { question: "माउंट एवरेस्ट किस दो देशों की सीमा पर स्थित है?", options: ["भारत और चीन", "नेपाल और चीन", "भूटान और तिब्बत", "भारत और नेपाल"], correct: 1 },
+  { question: "किस देश को 'सूर्योदय की भूमि' कहा जाता है?", options: ["चीन", "जापान", "थाईलैंड", "दक्षिण कोरिया"], correct: 1 },
+  { question: "कौन सा देश 'कंगारूओं की भूमि' के नाम से प्रसिद्ध है?", options: ["न्यूजीलैंड", "ऑस्ट्रेलिया", "अमेरिका", "ब्राजील"], correct: 1 },
+  { question: "विश्व का सबसे पुराना लोकतंत्र किस देश में है?", options: ["भारत", "ब्रिटेन", "ग्रीस", "अमेरिका"], correct: 2 },
+  { question: "क्रिस्टो द रिडीमर प्रतिमा कहाँ स्थित है?", options: ["अर्जेंटीना", "ब्राजील", "चिली", "पेरू"], correct: 1 },
+  { question: "नियाग्रा जलप्रपात किन दो देशों की सीमा पर स्थित है?", options: ["अमेरिका और कनाडा", "अमेरिका और मैक्सिको", "कनाडा और ग्रीनलैंड", "अमेरिका और ब्राजील"], correct: 0 },
+  { question: "विश्व का सबसे व्यस्त हवाई अड्डा कौन सा है?", options: ["बीजिंग कैपिटल एयरपोर्ट", "लॉस एंजेलेस एयरपोर्ट", "दुबई इंटरनेशनल एयरपोर्ट", "अटलांटा इंटरनेशनल एयरपोर्ट"], correct: 3 },
+  { question: "विश्व का सबसे ऊँचा सक्रिय ज्वालामुखी कौन सा है?", options: ["माउंट वेसुवियस", "माउंट कोटोपैक्सी", "माउंट एटना", "ओजोस डेल सलाडो"], correct: 3 },
+  { question: "पेट्राफाईड जंगल कहाँ स्थित है?", options: ["अमेरिका", "ऑस्ट्रेलिया", "चिली", "इंडोनेशिया"], correct: 0 },
+  { question: "किस देश में सबसे अधिक समय तक दिन और रात एक समान होते हैं?", options: ["नार्वे", "स्वीडन", "फिनलैंड", "आइसलैंड"], correct: 0 },
+  { question: "बुर्ज खलीफा कहाँ स्थित है?", options: ["दुबई", "सऊदी अरब", "कतर", "ओमान"], correct: 0 },
+  { question: "किस देश को 'पिरामिडों की भूमि' कहा जाता है?", options: ["मेक्सिको", "इंडोनेशिया", "मिस्र", "पेरू"], correct: 2 },
+  { question: "किस देश का झंडा सबसे पुराना है?", options: ["ब्रिटेन", "डेनमार्क", "फ्रांस", "जर्मनी"], correct: 1 },
+  { question: "किस देश का राष्ट्रीय खेल सूमो कुश्ती है?", options: ["कोरिया", "जापान", "मंगोलिया", "चीन"], correct: 1 },
+  { question: "गोल्डन गेट ब्रिज किस शहर में स्थित है?", options: ["लॉस एंजेलेस", "न्यूयॉर्क", "सैन फ्रांसिस्को", "सिएटल"], correct: 2 },
+  { question: "विश्व का सबसे बड़ा क्रिकेट स्टेडियम कौन सा है?", options: ["मेलबर्न क्रिकेट ग्राउंड", "लॉर्ड्स", "नरेंद्र मोदी स्टेडियम", "ईडन गार्डन्स"], correct: 2 }
+        ];
+        
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let attempts = 0;
+        let selectedAnswer = null;
+        let timer;
+
+        function startTest() {
+            document.getElementById("startContainer").style.display = "none";
+            document.getElementById("quizContainer").style.display = "block";
+            loadQuestion();
+        }
+
+        function startTimer() {
+            let timeLeft = 60;
+            document.getElementById("timer").textContent = `Time Left: ${timeLeft}s`;
+            timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById("timer").textContent = `Time Left: ${timeLeft}s`;
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    nextQuestion();
+                }
+            }, 1000);
+        }
+
+        function loadQuestion() {
+            clearInterval(timer);
+            startTimer();
+            document.getElementById("nextBtn").style.display = "none";
+            selectedAnswer = null;
+            document.getElementById("questionNumber").textContent = `Question ${attempts + 1} of 20`;
+            const questionData = questions[currentQuestionIndex];
+            document.getElementById("question").textContent = questionData.question;
+            
+            const optionsContainer = document.getElementById("options");
+            optionsContainer.innerHTML = "";
+            questionData.options.forEach((option, index) => {
+                const button = document.createElement("button");
+                button.textContent = option;
+                button.onclick = () => selectAnswer(button, index);
+                optionsContainer.appendChild(button);
+            });
+        }
+
+        function selectAnswer(button, selectedIndex) {
+            if (selectedAnswer !== null) {
+                document.querySelectorAll(".options button").forEach(btn => btn.classList.remove("selected"));
+            }
+            selectedAnswer = selectedIndex;
+            button.classList.add("selected");
+            document.getElementById("nextBtn").style.display = "block";
+        }
+
+        function nextQuestion() {
+            clearInterval(timer);
+            if (selectedAnswer !== null && selectedAnswer === questions[currentQuestionIndex].correct) {
+                score++;
+            }
+            currentQuestionIndex++;
+            attempts++;
+            
+            if (attempts < 20 && currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                showFinalResult();
+            }
+        }
+
+        function showFinalResult() {
+            document.getElementById("quizContainer").style.display = "none";
+            document.getElementById("resultContainer").style.display = "block";
+            document.getElementById("score").textContent = score;
+            document.getElementById("correctCount").textContent = `Correct Answers: ${score}`;
+            document.getElementById("wrongCount").textContent = `Wrong Answers: ${attempts - score}`;
+        }
+
+        function goToNextPage() {
+            window.location.href = "nextpage.html";
+        }
+    
+    let isAdmin = false; // एडमिन लॉगिन स्टेटस
+
+    function adminLogin() {
+        let password = prompt("Enter Admin Password:");
+        if (password === "shakya80") { 
+            isAdmin = true;
+            document.getElementById("adminStatus").innerText = "Admin Logged In!";
+            displayComments(); // फिर से कमेंट्स दिखाओ ताकि Delete बटन ऐड हो जाए
+        } else {
+            alert("Wrong Password! Try again.");
+        }
+    }
+
+    function addComment(event) {
+        event.preventDefault();
+        let name = document.getElementById("nameInput").value;
+        let comment = document.getElementById("commentInput").value;
+        let timestamp = new Date().toLocaleString();
+
+        let comments = JSON.parse(localStorage.getItem("comments")) || [];
+        comments.push({ name, comment, timestamp });
+        localStorage.setItem("comments", JSON.stringify(comments));
+
+        document.getElementById("nameInput").value = "";
+        document.getElementById("commentInput").value = "";
+
+        displayComments();
+    }
+
+    function displayComments() {
+        let comments = JSON.parse(localStorage.getItem("comments")) || [];
+        let commentsList = document.getElementById("commentsList");
+        commentsList.innerHTML = "<h2>All Comments:</h2>";
+
+        comments.forEach((commentObj, index) => {
+            let div = document.createElement("div");
+            div.classList.add("comment-item");
+            div.innerHTML = `<strong>${commentObj.name}</strong> <br> ${commentObj.comment} <br> <small>${commentObj.timestamp}</small> <br>`;
+
+            // अगर एडमिन लॉग इन है तो Delete बटन दिखाओ
+            if (isAdmin) {
+                div.innerHTML += `<button onclick="deleteComment(${index})">Delete</button>`;
+            }
+
+            commentsList.appendChild(div);
+        });
+    }
+
+    function deleteComment(index) {
+        if (isAdmin) {
+            let comments = JSON.parse(localStorage.getItem("comments")) || [];
+            comments.splice(index, 1);
+            localStorage.setItem("comments", JSON.stringify(comments));
+            displayComments();
+        } else {
+            alert("Only admin can delete comments!");
+        }
+    }
+
+    displayComments(); // पेज लोड होते ही कमेंट्स दिखें
+</script>
+       
+    <footer>
+        <p><small>&copy; 2025 Deepanshu Ranjan. All rights reserved.</small></p>
+    </footer>
+</body>
+</html>
