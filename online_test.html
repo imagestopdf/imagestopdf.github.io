@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hello दोस्तों! आप हमारे इस वेबसाइट से अपनी GK की तैयारी कर सकते है. आपको नीचे एक Question होगा और 4 options दिए गए है आपको opton को choose करना है और next बटन पर click करना है. ">
-    <meta name="keywords" content="gk online test, online gk test in hindi, gk online test in hindi, gk questions in hindi">
-    <meta name="author" content="Deepanshu ranjan">
-    <title>GK online test in hindi</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="nphstudy" content="NPHstudy">
+    <title>Page Title here</title>
     <style>
              
     /* Basic Styling */
@@ -25,87 +25,76 @@
             color: #ffffff;
             box-size: 30px;
         }
-   
-        .container { 
-          width: 90%; /* Mobile के लिए ज्यादा width */
-    max-width: 400px; /* Desktop पर ज्यादा चौड़ा न हो */
-    margin: auto; /* Center में लाने के लिए */
-    padding: 20px;
-    min-height: 300px;
-    border: 5px solid blue;
-    border-radius: 0px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    .container { 
+            width: 90%; 
+           margin: auto; 
+            padding: 20px; 
+            text-align: center;
+            border: 4px solid red; 
+            border-radius: 0px; 
+            min-height: 300px; 
         }
-        .container h2 {
-          color: yellow;
-          text-align: center;
+    .container h2 {
+        color: yellow;
+        font-size: 15px;
+    }
+    .container h1 {
+        color: white;
+        font-size: 25px;
+    }
+    .container h3 {
+        color: white;
+        font-size: 25px;
+    }
+        .options button { 
+            display: block; 
+            width: 100%; 
+            margin: 5px 0; 
+            padding: 10px; 
+            cursor: pointer; 
         }
-  .container h1 {
-    color: white;
-    margin-bottom: 1px;
-    text-align: center;
-    font-size: 25px;
-  }
-        .options {
-    display: flex;
-    flex-direction: column; /* Buttons को ऊपर-नीचे (column) में रखेगा */
-    align-items: center; /* Center में लाने के लिए */
-    gap: 10px; /* Buttons के बीच gap */
-}
-.options button {
-    width: 90%; /* Buttons को थोड़ा चौड़ा करें */ 
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-}
         .selected { 
-          background-color: yellow; 
+            background-color: yellow; 
         }
         #nextBtn { 
-          display: none;
-          width: 50%;
-          background-color: green;
-          color: yellow;
-          padding: 10px 20px;
-          font-size: 16px;
-          cursor: pointer;
-          display: block;
-          margin: 10px auto; 
-             }
-  #quizContainer { 
-          display: none; 
-          background-color: ;
-          text-align: center;
-          margin: 2px;
-          justify-content: center;
-          align-items: center;
-          padding: 10px;
-          width: 50%;
-          margin: 20px auto;
-          margin-top: 10px; 
-          cursor: pointer;
-  }
-    #startBtn {
-        display: flex;
-        color: black;
-        background: red;
-        justify-content: center;
-          align-items: center;
-          padding: 10px;
-          width: 50%;
-          margin: 20px auto;
-          margin-top: 10px; 
-          cursor: pointer;
-    }
-        
-        #timer { 
-          font-size: 15px; 
-          margin: 10px 0; 
-          color: red; 
-          text-align: right;
+            display: none; 
+            color: black;
+            background-color: red;
+            width: 50%;
+            margin: auto;
+            padding: 15px;
+            margin-top: 10px; 
         }
-        #questionNumber { 
-          font-size: 15px; 
+    #nextPageBtn { 
+            display: none; 
+            margin-top: 10px; 
+        }
+    #quizContainer { 
+            display: none; 
+            margin-top: 10px; 
+        }
+        #timer { 
+            font-size: 20px; 
+            margin: 10px 0;
+            text-align: right;            
+            color: red; 
+        }
+       #questionNumber { 
+           font-size: 18px; 
+       }
+    #startBtn { 
+        padding: 10px; 
+        width: 50%;
+        background-color: red;
+        font-size: 18px; 
+        cursor: pointer; 
+        transition: all 0.3s ease; 
+    }
+        #startBtn.clicked { 
+            width: 80%; 
+            padding: 20px; 
+            background-color: green; 
+            color: white; 
         }
     
         body p { 
@@ -119,44 +108,7 @@
             margin-right: 10px;
 
         }
-    
-       body h1 {
-            color: #ffffff;
-            padding: 10px;
-            margin-left: 10px;
-            margin-right: 10px;
-            font-size: 30px;
-            font-family: 'JetBrains Mono', monospace;        
-        }
-        body h2 {
-           color: #ffff00;
-            padding: 10px;
-            margin-left: 10px;
-            margin-right: 10px;
-            font-size: 25px;
-            font-family: 'JetBrains Mono', monospace;        
-        }
-    body h3 { 
-        color: red;
-            font-size: 20px;
-            padding: 10px;
-            margin-left: 10px;
-            margin-right: 10px;
-            font-weight: bold;
-            font-family: 'JetBrains Mono', monospace;
-        }
-        p3 {
-            color: #ffffff;
-            font-size: 20px;
-            font-family: 'Sans-serif', Verdana;
-        }
-        p4 {
-            color: #ffffff;
-            font-size: 17px;
-            font-family: 'Sans-serif', Verdana;
-        }
-
-        header {
+            header {
             font-family: 'Monospace', Courier;
             background-color: #000000;
            
@@ -260,8 +212,6 @@
                 padding: 12px;
             }
         }
-
-
             section {
             padding: 20px;
             width: fix;
@@ -272,26 +222,14 @@
     section h2 {
         color: #000000;
     }
-        p5 {
+       section p5 {
             color: #ff0000;
             font-size: 20px;
         }
-        P6 {
+       section P6 {
             color: #000000;
             font-size: 20px
         }
-
-        h5 {
-            color: #ffff00;
-            font-size: 40px;
-        }
-
-        p {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            color: #FFFFFF;
-        }
-
         footer {
             background-color: #575757;
             bottom: 0;
@@ -303,41 +241,6 @@
             text-align: center;
         }
 
-        .container {
-            width: 100%;
-            margin: auto;
-        }
-    
-        ul {
-            color: #00ff00;
-        }
-    table {
-            width: 90%;
-            display: flex;
-            background-color: black;
-            justify-content: center;
-            margin: 20px;
-            border-collapse: collapse;
-        }
-        th {
-            border: 2px solid yellow;
-            padding: 8px;
-            font-size: 15px;
-            text-align: center;
-            color: red;
-            font-size: 20px;
-        }            
-        td {
-            border: 2px solid yellow;
-            padding: 8px;
-            font-size: 15px;
-            text-align: center;
-        }
-        th {
-            background-color: #000000;
-        }
-
-    
 /* Comment Box Styles */
 .comment-box {
     background-color: #00ffff;
@@ -430,10 +333,22 @@
             .comment-box button {
                 font-size: 18px;
             }
+            .container {
+                padding: 15px;
+            }
+            .container h2 {
+                font-size: 15px;
+            }
+            .container h1 {
+                font-size: 22px;
+            }
+            .container h3 {
+                font-size: 22px;
+            }
             section {
                 padding: 10px;
             }
-            p5, p6 {
+            section p5, section p6 {
                 font-size: 18px;
             }
         }
@@ -462,10 +377,8 @@
         </nav>
     </div>
        <br><br><br>
-<body>
-    <p>Hello दोस्तों! आप हमारे इस वेबसाइट से अपनी GK की तैयारी कर सकते है. आपको नीचे एक Question होगा और 4 options दिए गए है आपको opton को choose करना है और next बटन पर click करना है. आपको 20 Question दिए गए है. और जब आप सब questions को कर लेगे तो आप अपना तुरंत ही final result देख सकते है और अगर आप और question को attampt karna चाहते है तो नीचे अगले page's पर जा कर test दे सकते है. </p><br><br>
-    <div class="container" id="startContainer">
-        <h1>Click on start button to start the test</h1>
+ <div class="container" id="startContainer">
+        <h3>Test start करने के लिए Start Test बटन पर क्लिक करें</h3>
         <button id="startBtn" onclick="startTest()">Start Test</button>
     </div>
 
@@ -481,20 +394,12 @@
         <p id="scoreDisplay">Final Score: <span id="score">0</span></p>
         <p id="correctCount"></p>
         <p id="wrongCount"></p>
-        <button id="nextPageBtn" onclick="goToNextPage()">Go to Next Section</button>
-    </div><br><br>
-
-    <table>
-        <tr>
-            <th><a href="#page1">Page 1</a></th>
-            <th><a href="#page2">Page 2</a></th>
-            <th><a href="#page3">Page 3</a></th>
-            <th><a href="#page4">Page 4</a></th>
-            <th><a href="#page5">Page 5</a></th>
-        </tr>
-    </table><br><br>
-    
-<div class="comment-box">
+        
+        
+    </div>
+  
+<br><br>
+ <div class="comment-box">
     <h2>Please Write your comment &#128071;</h2><br>
     <form onsubmit="addComment(event)">
         <label for="name"> Name: </label>
@@ -514,9 +419,20 @@
 </section>
 
  <script>
-       
-        const questions = [
-            { question: "विश्व में सबसे अधिक बोली जाने वाली भाषा कौन सी है?", options: ["अंग्रेज़ी", "स्पैनिश", "हिन्दी", "मंदारिन"], correct: 3 },
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    const hamburger = document.querySelector('.hamburger-icon');
+    menu.classList.toggle('active');
+    
+    if (menu.classList.contains('active')) {
+        hamburger.innerHTML = '&#10006;'; // Cross icon (X)
+    } else {
+        hamburger.innerHTML = '&#9776;'; // Three lines icon
+    }
+}
+// Question conding
+    const questions = [
+             { question: "विश्व में सबसे अधिक बोली जाने वाली भाषा कौन सी है?", options: ["अंग्रेज़ी", "स्पैनिश", "हिन्दी", "मंदारिन"], correct: 3 },
   { question: "ओपेरा हाउस किस देश में स्थित है?", options: ["इटली", "ऑस्ट्रेलिया", "फ्रांस", "अमेरिका"], correct: 1 },
   { question: "प्रसिद्ध एफिल टॉवर कहाँ स्थित है?", options: ["इटली", "स्पेन", "फ्रांस", "जर्मनी"], correct: 2 },
   { question: "माउंट एवरेस्ट किस दो देशों की सीमा पर स्थित है?", options: ["भारत और चीन", "नेपाल और चीन", "भूटान और तिब्बत", "भारत और नेपाल"], correct: 1 },
@@ -616,7 +532,7 @@
         function goToNextPage() {
             window.location.href = "nextpage.html";
         }
-    
+
     let isAdmin = false; // एडमिन लॉगिन स्टेटस
 
     function adminLogin() {
