@@ -7,7 +7,7 @@
     <meta name="description" content="Hello दोस्तो! Online test देने के लिए नीचे दी गयी Start Test बटन पर क्लिक करें और फिर आपको एक Question के 4 option मिलेंगे आपको एक option choose करना है जैसे ही आप एक option choose कर लेंगे ">
      <meta name="keywords" content="gk online test in hindi, online gk test in hindi, gk question in hindi, gk test question in hindi, online quiz test in hindi, online quiz test gk in hindi">
     <meta name="author" content="Deepanshu Ranjan">
-    <title>Page 1 GK Online test in Hindi</title>
+    <title>GK Online test in Hindi Quiz Test in Hindi</title>
     <style>
              
     /* Basic Styling */
@@ -104,7 +104,14 @@
             background-color: green; 
             color: white; 
         }
-    
+    .result-item { 
+    text-align: left;
+    color: white;    
+    margin: 10px 0; 
+    padding: 10px; 
+    border: 2px solid #blue; 
+    background: #333; 
+  }
         body p { 
             font-family: 'Poppins', sans-serif;
             background-color: #000000;
@@ -426,6 +433,7 @@
         <p id="scoreDisplay">Final Score: <span id="score">0</span></p>
         <p id="correctCount"></p>
         <p id="wrongCount"></p>
+        <div id="detailedResults"></div>
         <h1>और test देने के लिए अगले page पर जाए. Thank you.</h1>     
     </div><br><br><br><br><br><br>
     <table>
@@ -499,6 +507,7 @@ function toggleMenu() {
   { question: "किस देश का झंडा सबसे पुराना है?", options: ["ब्रिटेन", "डेनमार्क", "फ्रांस", "जर्मनी"], correct: 1 },
   { question: "किस देश का राष्ट्रीय खेल सूमो कुश्ती है?", options: ["कोरिया", "जापान", "मंगोलिया", "चीन"], correct: 1 },
   { question: "गोल्डन गेट ब्रिज किस शहर में स्थित है?", options: ["लॉस एंजेलेस", "न्यूयॉर्क", "सैन फ्रांसिस्को", "सिएटल"], correct: 2 },
+  { question: "भारत की पहली महिला प्रधानमंत्री कौन थी?", options: ["प्रतिभा पाटिल", "इंदिरा गांधी", "सरोजिनी नायडू", "सोनिया गांधी"], correct: 1 },
   { question: "विश्व का सबसे बड़ा क्रिकेट स्टेडियम कौन सा है?", options: ["मेलबर्न क्रिकेट ग्राउंड", "लॉर्ड्स", "नरेंद्र मोदी स्टेडियम", "ईडन गार्डन्स"], correct: 2 }
         ];
         
@@ -507,6 +516,7 @@ function toggleMenu() {
         let attempts = 0;
         let selectedAnswer = null;
         let timer;
+        let userAnswers = [];
 
         function startTest() {
             document.getElementById("startContainer").style.display = "none";
@@ -557,6 +567,12 @@ function toggleMenu() {
 
         function nextQuestion() {
             clearInterval(timer);
+            userAnswers.push({
+                question: questions[currentQuestionIndex].question,
+                selected: selectedAnswer !== null ? questions[currentQuestionIndex].options[selectedAnswer] : "No Answer",
+                correct: questions[currentQuestionIndex].options[questions[currentQuestionIndex].correct]
+            });
+            
             if (selectedAnswer !== null && selectedAnswer === questions[currentQuestionIndex].correct) {
                 score++;
             }
@@ -576,10 +592,12 @@ function toggleMenu() {
             document.getElementById("score").textContent = score;
             document.getElementById("correctCount").textContent = `Correct Answers: ${score}`;
             document.getElementById("wrongCount").textContent = `Wrong Answers: ${attempts - score}`;
-        }
-
-        function goToNextPage() {
-            window.location.href = "nextpage.html";
+            
+            let detailedResults = document.getElementById("detailedResults");
+            detailedResults.innerHTML = "";
+            userAnswers.forEach((item, index) => {
+                detailedResults.innerHTML += `<div class='result-item'><strong>Q${index + 1}: ${item.question}</strong><br> Your Answer: ${item.selected}<br> Correct Answer: ${item.correct}</div>`;
+            });
         }
 
     let isAdmin = false; // एडमिन लॉगिन स्टेटस
