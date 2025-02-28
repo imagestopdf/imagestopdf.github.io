@@ -234,7 +234,65 @@
         font-size: 20px;
         color: #ffff00;
     }
+/* Contact form Styles */
+.contact-form {
+    background-color: #00ffff;
+    padding: 10px;
+    border-top: 4px solid #0000ff;
+    border-bottom: 4px solid #0000ff;
+    border-right: 4px solid #0000ff;
+    border-left: 4px solid #0000ff;
+}
 
+.contact-form h2 {
+    color: #0000ff;
+    padding: 0;
+    font-size: 25px;
+}
+
+.contact-form form {
+    display: flex;
+    margin: 20px:
+    width: 100%;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    color: #000000;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #0fff00;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    border: 5px;;
+    border-radius: 5px;
+    cursor: pointer;
+}
+        .contact-form button:hover {
+            background-color: #218838;
+        }
         /* Footer Styling */
         footer {
             background-color: #333;
@@ -328,18 +386,64 @@
         <h2>About Us</h2>
         <p>We are a web developers dedicated to providing top-quality services to our clients. Our commitment to excellence and passion for innovation drives us to create effective solutions for every project.</p>
     </section>
-
-  
+<!-- contact form -->
+<div class="contact-form">
+    <h2 style="text-align: center; font-size: 30px; font-weigh: bold;">Contact Us</h2><br>
+    <form>
+        <label for="name"> *Name: </label>
+        <input type="text" id="nameInput" placeholder="Enter Your Name" required><br>
+        <label for="email"> *Email:</label>
+        <input type="email" id="emailInput" placeholder="Enter Your Email" required><br>
+        <textarea id="commentInput" placeholder="Write your message here..."></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2>Contact Us</h2>
+        <h2>Help/Problem</h2>
         <h3 style="color:#00ff00"><span style="color: red">Email:</span> deepanshuranjan8057@gmail.com</h1>
-        <h3 style="color:#00ff00"><span style="color: red">Whatsapp:</span> +91 8057754706</h1>
+        <h3 style="color:#00ff00"><span style="color: red">Whatsapp:</span> +91 8057754706</h1><br>
+    </section>
+<section class="about" id="about">
         <h2>Follow Us</h2>
-        <a href="https://www.facebook.com/share/1EFct8Yizb/"><img src="https://i.ibb.co/PsvYBbXh/art-illustration-929495-41.jpg" width=30px" border="0"></a>&nbsp;&nbsp;
+        <a href="https://www.facebook.com/share/161JcQXr77/"><img src="https://i.ibb.co/PsvYBbXh/art-illustration-929495-41.jpg" width=30px" border="0"></a>&nbsp;&nbsp;
         <a href="https://www.instagram.com/deepanshuranjan80?igsh=dHhmOGR0cmZxaGRi"><img src="https://i.ibb.co/SX1vHFDs/Instagram-new-logo-e1652752802319.jpg" width="30px" border="0"></a>
     </section>
+<!--PHP code for contact us form
+<?php
+$servername = "localhost";
+$username = "deepanshuranjan";  // Agar aapka default MySQL username root hai
+$password = "#@shakya80"; // Jo aapne diya hai
+$dbname = "nphstudy_cantact_db";
 
+// Database Connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Connection Check
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Form Data Retrieve
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    // SQL Query to Insert Data
+    $sql = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<script>alert('Message sent successfully!');</script>";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+// Close Connection
+$conn->close();
+?>
+-->
     <script>
    function toggleMenu() {
     const menu = document.getElementById('menu');
