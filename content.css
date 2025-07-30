@@ -114,7 +114,7 @@ header h3 {
         flex-direction: column;
         position: absolute;
         padding: 10px;
-        top: 60px;
+        top: 62px;
         left: 0;
         width: 50%;
         background-color: #333;
@@ -164,4 +164,27 @@ footer p {
   width: 100%;
   max-width: 800px;
   margin: auto;
+  background: #ddd;
+}
+
+.external-links {
+  background: #aaa;
+  padding: 20px;
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.a-styles {
+  color: blue;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  transition: all 0.4s ease;
+}
+.a-styles:hover {
+  background: #ccc;
+  border-radius: 5px;
+  text-decoration: underline;
 }
