@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /about/
+Disallow: /services/
+Disallow: /contact/
+Disallow: /privacy-policy/
+
+Sitemap: https://imagestopdf.github.io/sitemap.xml
