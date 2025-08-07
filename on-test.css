@@ -1,0 +1,170 @@
+.container { 
+    width: 92%; 
+    margin: auto; 
+    padding: 20px; 
+    text-align: center;
+    border: 2px solid yellow; 
+    border-radius: 8px; 
+    min-height: 300px; 
+    align-content: center;
+    background: #141414;
+    box-sizing: border-box;
+}
+  .container h2 {
+    color: orange;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+    .container h3 {
+        color: #fff;
+        font-size: 25px;
+    }
+        .options button { 
+            display: block; 
+            width: 100%; 
+            margin-bottom: 10px;
+            margin-top: 5px;
+            padding: 10px; 
+            cursor: pointer; 
+            font-weight: bold;
+            text-align: left;
+            border: none;
+            border-radius: 2px;
+        }
+        .selected { 
+            background-color: #adaa;
+   
+        }
+        #nextBtn { 
+            display: none; 
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: green;
+            width: 100%;
+            margin: auto;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+      
+    #nextPageBtn { 
+            display: none; 
+            margin-top: 10px; 
+        }
+    #quizContainer { 
+            display: none; 
+            margin-top: 10px; 
+        }
+        #timer { 
+            font-size: 15px; 
+            font-weight: bold;
+            margin: 10px 0;
+            text-align: right;            
+            color: yellow; 
+        }
+       #questionNumber { 
+           font-size: 18px; 
+       }
+    #startBtn { 
+        padding: 10px; 
+        width: 50%;
+        background-color: green;
+        font-size: 18px; 
+        font-weight: bold;
+        cursor: pointer; 
+        border-radius: 32px;
+        transition: all 0.3s ease; 
+    }
+    #startBtn:hover {
+      background: skyblue;
+    }
+        #startBtn.clicked { 
+            width: 80%; 
+            padding: 20px; 
+            background-color: green; 
+            color: white; 
+        }
+    .result-item { 
+    text-align: left;
+    color: white;    
+    margin: 10px 0; 
+    padding: 10px; 
+    border: 1px solid #aadf; 
+    border-radius: 3px;
+    background: #222; 
+    
+  }
+.next-btn {
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: none;
+  text-decoration: none;
+  border-radius: 30px;
+  background: green;
+  transition: 0.4s ease;
+  color: white;
+  box-shadow: 0 5px 15px black;
+}
+.next-btn:hover {
+  background: orange;
+  color: black;
+  box-shadow: 2px 2px yellow;
+}
+
+.right-icon {
+    color: yellow;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.wrong-icon {
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.fail {
+    color: red;
+    font-weight: bold;
+}
+.pass {
+    color: green;
+    font-weight: bold;
+}
+.excellent {
+    color: yellow;
+    font-weight: bold;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.your-label {
+    color: #007bff; /* Blue */
+}
+
+.correct-label {
+    color: green;
+}
+
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid blue;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin: auto;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
