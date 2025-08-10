@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online JavaScript Minifier Tool | Reduce JS File Size Instantly</title>
+    <meta name="description" content="Free online JavaScript minifier tool that reduces JS file size by removing comments, whitespace and unnecessary characters. Works instantly in your browser with no upload required.">
+    <meta name="keywords" content="JavaScript minifier, JS compressor, minimize JS, optimize JS, reduce JS size, online JS tool">
+    <meta name="author" content="Deepanshu Ranjan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://imagestopdf.github.io/Tools/javascript-minifier.html">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Free Online JavaScript Minifier Tool">
+    <meta property="og:description" content="Reduce JavaScript file size instantly with our free online minifier tool">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imagestopdf.github.io/Tools/javascript-minifier.html">
+    <meta property="og:image" content="https://imagestopdf.github.io/favicon.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online JavaScript Minifier Tool">
+    <meta name="twitter:description" content="Reduce JavaScript file size instantly with our free online minifier tool">
+    <meta name="twitter:image" content="https://imagestopdf.github.io/favicon.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "JavaScript Minifier Tool",
+      "url": "https://imagestopdf.github.io/Tools/javascript-minifier.html",
+      "description": "Free online tool to minify and compress JavaScript code",
+      "applicationCategory": "DeveloperTools",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="minifier.css">
+    <link rel="stylesheet" href="../content.css">
+    
+</head>
+<body>
+  <header>
+              <h3>Images to PDF</h3>
+       </header>
+<div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../services.html">Services</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../online-quiz.html">Online Quiz</a>
+        </nav>
+    </div>
+  
+    <div class="container">
+        <h1>JavaScript Minifier Tool</h1>
+        
+        <div class="tab-container">
+            <button class="tab-button active">JavaScript Minifier</button>
+            <button class="tab-button" onclick="location.href='css-minifier.html'">CSS Minifier</button>
+        </div>
+        
+        <div class="editor-container">
+            <div class="editor-box">
+                <div class="editor-header">
+                    Original JavaScript
+                </div>
+                <textarea id="original-js" placeholder="Paste your JavaScript code here..."></textarea>
+                
+                <!-- Mobile Minify Button -->
+                <div class="action-buttons">
+                    <button onclick="minifyJS()">Minify JavaScript</button>
+                </div>
+            </div>
+            
+            <div class="editor-box">
+                <div class="editor-header">
+                    Minified JavaScript
+                </div>
+                <textarea id="minified-js" readonly placeholder="Minified JavaScript will appear here..."></textarea>
+                
+                <!-- Mobile Copy Button -->
+                <div class="action-buttons">
+                    <button class="copy-button" onclick="copyToClipboard('minified-js')">Copy Minified JS</button>
+                </div>
+            </div>
+        </div>
+       
+        
+        <div class="stats" id="stats">
+            Original: 0 bytes | Minified: 0 bytes | Savings: 0%
+        </div>
+    <hr>
+    <!-- SEO Content Section -->
+        <section aria-labelledby="about-heading">
+            <h2 id="about-heading">About JavaScript Minification</h2>
+            <p>Our free online JavaScript minifier tool helps you reduce the file size of your JS code by removing unnecessary characters, whitespace, and comments. Minifying your JavaScript can significantly improve page load times and overall website performance.</p>
+            
+            <h3>How to Use This Tool</h3>
+            <ol>
+                <li>Paste your JavaScript code into the "Original JavaScript" box</li>
+                <li>Click the "Minify JavaScript" button</li>
+                <li>Copy the optimized code from the "Minified JavaScript" box</li>
+                <li>Use the compressed JavaScript in your production website</li>
+            </ol>
+            
+            <h3>Benefits of JavaScript Minification</h3>
+            <ul>
+                <li>Reduces file size by 30-50% on average</li>
+                <li>Improves page load speed</li>
+                <li>Reduces bandwidth usage</li>
+                <li>Works with all valid JavaScript code</li>
+                <li>No server upload - processing happens in your browser</li>
+                <li>Helps obfuscate code (basic level)</li>
+            </ul>
+            
+            <h3>Important Notes</h3>
+            <p>This tool performs basic minification. For production websites, consider using more advanced tools like:</p>
+            <ul>
+                <li>UglifyJS</li>
+                <li>Terser</li>
+                <li>Babel Minify</li>
+                <li>Webpack with production mode</li>
+            </ul>
+            <p>Always test your minified code thoroughly before deploying to production.</p>
+        </section>
+    </div>
+    
+    <script>
+        function minifyJS() {
+            const originalJS = document.getElementById('original-js').value;
+            
+            // Basic minification process
+            let minified = originalJS
+                .replace(/\/\*[\s\S]*?\*\//g, '')  // Remove multi-line comments
+                .replace(/\/\/.*$/gm, '')          // Remove single-line comments
+                .replace(/\s+/g, ' ')              // Replace multiple spaces with single space
+                .replace(/\s*([=+\-*\/%&|^~!<>?:;,{}()[\]])\s*/g, '$1')  // Remove spaces around operators
+                .replace(/;(\s*})/g, '$1')        // Remove semicolons before closing braces
+                .replace(/\s+/g, ' ')              // Replace multiple spaces with single space again
+                .trim();                           // Trim whitespace
+            
+            document.getElementById('minified-js').value = minified;
+            
+            // Calculate stats
+            const originalSize = originalJS.length;
+            const minifiedSize = minified.length;
+            const savings = originalSize > 0 ? Math.round((1 - minifiedSize / originalSize) * 100) : 0;
+            
+            document.getElementById('stats').textContent = 
+                `Original: ${originalSize} bytes | Minified: ${minifiedSize} bytes | Savings: ${savings}%`;
+            
+            // Enable copy button
+            const copyButtons = document.querySelectorAll('.copy-button');
+            copyButtons.forEach(button => {
+                button.classList.add('active');
+            });
+        }
+        
+        function copyToClipboard(elementId) {
+            const textarea = document.getElementById(elementId);
+            textarea.select();
+            document.execCommand('copy');
+            
+            // Show a temporary tooltip
+            const copyBtn = event.target;
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+<div class="external-link">
+      <h2 style="margin: 10px; width: 100%;">Blogs/Articles</h2>
+   <div class="external-links">
+  <div class="a-styles">
+  <a href="../best-study-tips.html">Ultimate Study Hacks & Exam Tips for Academic Success</a>
+  </div>
+  <div class="a-styles">
+  <a href="../skincare-and-haircare-routine.html">Ultimate Skincare & Haircare Routine for Healthy Skin & Hair</a>
+  </div>
+  <div class="a-styles">
+  <a href="../seasonal-fashion-trends.html">Ultimate Guide to Seasonal Fashion Trends</a>
+  </div>
+  <div class="a-styles">
+  <a href="../is-ai-danguros.html">Is AI Dangerous for Humanity?</a>
+  </div>
+  <div class="a-styles">
+  <a href="../the-future-of-ai.html">How Artificial Intelligence Will Transform Our World Artificial Intelligence</a>
+  </div>
+  <div class="a-styles">
+  <a href="../world-best-technologies.html">The World’s Best Technologies Shaping the Future</a>
+  </div>
+  <div class="a-styles">
+  <a href="../deep-space-exploration.html">Deep Space Exploration: Unveiling the Mysteries of the Universe</a>
+  </div>
+  <div class="a-styles">
+  <a href="../nasa-deep-space-mission.html">NASA: Pioneering the Future of Space Exploration</a>
+  </div>
+  <div class="a-styles">
+  <a href="../success-of-elon-musk.html">The Extraordinary Success of Elon Musk: Visionary, Innovator, and Disruptor</a>
+  </div>
+  <div class="a-styles">
+  <a href="../how-to-become-a-software-engineer.html">How to Become a Software Engineer: A Comprehensive Guide</a>
+  </div>
+  <div class="a-styles">
+  <a href="../how-to-make-a-website.html">How to Make a Website: Step by Step Guide</a>
+  </div>
+  <div class="a-styles">
+  <a href="../success-story-of-google.html">The Extraordinary Success Story of Google</a>
+  </div>
+  <div class="a-styles">
+  <a href="../mysterious-world-of-the-deep-sea.html">The Mysterious World of the Deep Sea: Earth's Final Frontier</a>
+  </div>
+  <div class="a-styles">
+  <a href="../world-top-university.html">World’s Top Universities: Excellence in Education and Research</a>
+  </div>
+  <div class="a-styles">
+  <a href="../world-top-ai-tools.html">World’s Top AI Tools: The Ultimate Guide to Cutting-Edge AI</a>
+  </div>
+  <div class="a-styles">
+  <a href="../easy-home-recipes.html">Easy Home Recipes: Simple & Delicious Meals for Busy Lives</a>
+  </div>
+  <div class="a-styles">
+  <a href="../healthy-meal-ideas.html">Healthy Meal Ideas: Nutritious & Delicious Recipes for Every Diet</a>
+  </div>
+  <div class="a-styles">
+  <a href="../motivational-stories-quotes.html">Best Motivational Stories & Life-Changing Quotes for Daily Success</a>
+  </div>
+  <div class="a-styles">
+  <a href="../productivity-hacks-proven.html">10 Scientifically Proven Productivity Hacks to Boost Focus & Get More Done</a>
+  </div>
+  <div class="a-styles">
+  <a href="../smartphone-laptop-reviews-2025.html">Best Smartphone & Laptop Reviews 2025 – Top Expert Picks & Buyer’s Guide</a>
+  </div>
+</div>
+</div>
+
+<div class="about">
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com/share/1Kpe6MYFJT/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" width="40"></a>&nbsp;&nbsp;&nbsp;
+        <a href="https://www.instagram.com/deepanshuranjan80?igsh=dHhmOGR0cmZxaGRi"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" width="40"></a>
+    </div>
+    <footer>
+            <p>&copy; Copyright 2025 imagestopdf.github.io</p>
+      <p>By continuing to use this site you agree to our <a href="../terms.html">Terms and Services</a> and <a href="../privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="../script.js"></script>
+    
+</body>
+</html>

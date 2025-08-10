@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert PDF to Images - Extract Images from PDF</title>
+   <meta name="description" content="A Free Online tool that convert pdf into images, You Can Extract Images from PDF just one click, No Accound Needed, 100% free to use.">
+    <meta name="keywords" content="CSS minifier, CSS compressor, minimize CSS, optimize CSS, reduce CSS size, online CSS tool">
+    <meta name="author" content="Deepanshu Ranjan">
+    <meta name="robots" content="index, follow">
+    
+     <!-- SEO Code -->
+    <link rel="canonical" href="https://imagestopdf.github.io/Tools/pdf-to-image-converter.html">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Convert PDF to Images - Extract Images from PDF",
+      "url": "https://imagestopdf.github.io/Tools/pdf-to-image-converter.html",
+      "description": "A Free Online tool that convert pdf into images, You Can Extract Images from PDF just one click, No Accound Needed, 100% free to use.",
+      "applicationCategory": "DeveloperTools",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+   <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Convert PDF to Images - Extract Images from PDF">
+    <meta property="og:description" content="A Free Online tool that convert pdf into images, You Can Extract Images from PDF just one click, No Accound Needed, 100% free to use.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imagestopdf.github.io/Tools/pdf-to-image-converter.html">
+    <meta property="og:image" content="https://imagestopdf.github.io/favicon.png">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Convert PDF to Images - Extract Images from PDF">
+    <meta name="twitter:description" content="A Free Online tool that convert pdf into images, You Can Extract Images from PDF just one click, No Accound Needed, 100% free to use.">
+    <meta name="twitter:image" content="https://imagestopdf.github.io/favicon.png">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://imagestopdf.github.io/favicon.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+    <link rel="stylesheet" href="pdf-to-image-converter.css">
+    <link rel="stylesheet" href="../content.css">
+</head>
+<body>
+  <header>
+              <h3>Images to PDF</h3>
+       </header>
+<div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../services.html">Services</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../online-quiz.html">Online Quiz</a>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>PDF to Image Converter</h1>
+        
+        <div class="upload-section">
+            <p>Drag & drop your PDF file here or</p>
+            <button class="upload-btn" id="upload-trigger">Choose PDF File</button>
+            <input type="file" id="pdf-upload" accept=".pdf" />
+        </div>
+        
+        <div class="quality-selector">
+            <p>Select image quality:</p>
+            <button class="quality-btn active" data-quality="low">Low Quality</button>
+            <button class="quality-btn" data-quality="medium">Medium Quality</button>
+            <button class="quality-btn" data-quality="high">High Quality</button>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Processing PDF...</p>
+        </div>
+        
+        <div class="status" id="status"></div>
+        
+        <div class="gallery" id="gallery"></div>
+        
+        <button class="download-all-btn" id="download-all" style="display: none;">Download All Images as ZIP</button>
+    </div>
+    
+    <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔀</div>
+                    <h3 class="feature-title">Simple Reordering</h3>
+                    <p>First drag and drop the PDFs file, or then, extract the images from our file..</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Privacy First</h3>
+                    <p>All processing takes place in your device's browser. Your files never leave your computer.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Use Everywhere</h3>
+                    <p>Use our pdf to images tool on any device - desktop, tablet, or mobile phone.</p>
+                </div>
+            </div>
+    
+    <div class="modal" id="image-modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+    <div class="external-link">
+      <h2 style="margin: 10px; width: 100%;">Blogs/Articles</h2>
+   <div class="external-links">
+  <div class="a-styles">
+  <a href="best-study-tips.html">Ultimate Study Hacks & Exam Tips for Academic Success</a>
+  </div>
+  <div class="a-styles">
+  <a href="skincare-and-haircare-routine.html">Ultimate Skincare & Haircare Routine for Healthy Skin & Hair</a>
+  </div>
+  <div class="a-styles">
+  <a href="seasonal-fashion-trends.html">Ultimate Guide to Seasonal Fashion Trends</a>
+  </div>
+  <div class="a-styles">
+  <a href="is-ai-danguros.html">Is AI Dangerous for Humanity?</a>
+  </div>
+  <div class="a-styles">
+  <a href="the-future-of-ai.html">How Artificial Intelligence Will Transform Our World Artificial Intelligence</a>
+  </div>
+  <div class="a-styles">
+  <a href="world-best-technologies.html">The World’s Best Technologies Shaping the Future</a>
+  </div>
+  <div class="a-styles">
+  <a href="deep-space-exploration.html">Deep Space Exploration: Unveiling the Mysteries of the Universe</a>
+  </div>
+  <div class="a-styles">
+  <a href="nasa-deep-space-mission.html">NASA: Pioneering the Future of Space Exploration</a>
+  </div>
+  <div class="a-styles">
+  <a href="success-of-elon-musk.html">The Extraordinary Success of Elon Musk: Visionary, Innovator, and Disruptor</a>
+  </div>
+  <div class="a-styles">
+  <a href="how-to-become-a-software-engineer.html">How to Become a Software Engineer: A Comprehensive Guide</a>
+  </div>
+  <div class="a-styles">
+  <a href="how-to-make-a-website.html">How to Make a Website: Step by Step Guide</a>
+  </div>
+  <div class="a-styles">
+  <a href="success-story-of-google.html">The Extraordinary Success Story of Google</a>
+  </div>
+  <div class="a-styles">
+  <a href="mysterious-world-of-the-deep-sea.html">The Mysterious World of the Deep Sea: Earth's Final Frontier</a>
+  </div>
+  <div class="a-styles">
+  <a href="world-top-university.html">World’s Top Universities: Excellence in Education and Research</a>
+  </div>
+  <div class="a-styles">
+  <a href="world-top-ai-tools.html">World’s Top AI Tools: The Ultimate Guide to Cutting-Edge AI</a>
+  </div>
+  <div class="a-styles">
+  <a href="easy-home-recipes.html">Easy Home Recipes: Simple & Delicious Meals for Busy Lives</a>
+  </div>
+  <div class="a-styles">
+  <a href="healthy-meal-ideas.html">Healthy Meal Ideas: Nutritious & Delicious Recipes for Every Diet</a>
+  </div>
+  <div class="a-styles">
+  <a href="motivational-stories-quotes.html">Best Motivational Stories & Life-Changing Quotes for Daily Success</a>
+  </div>
+  <div class="a-styles">
+  <a href="productivity-hacks-proven.html">10 Scientifically Proven Productivity Hacks to Boost Focus & Get More Done</a>
+  </div>
+  <div class="a-styles">
+  <a href="smartphone-laptop-reviews-2025.html">Best Smartphone & Laptop Reviews 2025 – Top Expert Picks & Buyer’s Guide</a>
+  </div>
+</div>
+</div>
+<div class="about">
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com/share/1Kpe6MYFJT/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" width="40"></a>&nbsp;&nbsp;&nbsp;
+        <a href="https://www.instagram.com/deepanshuranjan80?igsh=dHhmOGR0cmZxaGRi"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" width="40"></a>
+    </div>
+    <footer>
+      <p>&copy; Copyright 2025 imagestopdf.github.io</p>
+      <p>By continuing to use this site you agree to our <a href="../terms.html">Terms and Services</a> and <a href="../privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="pdf-to-image-converter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

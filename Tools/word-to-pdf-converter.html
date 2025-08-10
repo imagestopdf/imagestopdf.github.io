@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Word to PDF - Free No Accound Needed - Docx to PDF</title>
+    <meta name="description" content="A Free Online tool that convert word files into pdf formate, No Accound Needed, 100% free to use.">
+    <meta name="keywords" content="word to pdf, docx to pdf, online docx to pdf, word file into pdf, convert word into pdf, word to pdf online, word converter, pdf maker, how to, pdf tools, online tools web">
+    <meta name="author" content="Deepanshu Ranjan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://imagestopdf.github.io/Tools/word-to-pdf-converter.html">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Convert Word to PDF - Free No Accound Needed - Docx to PDF">
+    <meta property="og:description" content="A Free Online tool that convert word files into pdf formate, No Accound Needed, 100% free to use.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imagestopdf.github.io/Tools/word-to-pdf-converter.html">
+    <meta property="og:image" content="https://imagestopdf.github.io/favicon.png">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Convert Word to PDF - Free No Accound Needed - Docx to PDF">
+    <meta name="twitter:description" content="A Free Online tool that convert word files into pdf formate, No Accound Needed, 100% free to use.">
+    <meta name="twitter:image" content="https://imagestopdf.github.io/favicon.png">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Convert Word to PDF - Free No Accound Needed - Docx to PDF",
+      "url": "https://imagestopdf.github.io/Tools/word-to-pdf-converter.html",
+      "description": "A Free Online tool that convert word files into pdf formate, No Accound Needed, 100% free to use.",
+      "applicationCategory": "DeveloperTools",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.0/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="../content.css">
+    <link rel="stylesheet" href="word-to-pdf-converter.css">
+</head>
+<body>
+  
+  <header>
+              <h3>Images to PDF</h3>
+       </header>
+<div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../services.html">Services</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../online-quiz.html">Online Quiz</a>
+        </nav>
+    </div>
+    <div class="container">
+      <div style="
+                  background: #fff;
+                  padding: 20px;
+                  text-align: center;
+                  margin-bottom: 30px;
+                  border-radius: 10px;
+                  box-shadow: 0 3px 8px #333;">
+            <h1>Word to PDF Converter</h1>
+            <p class="subtitle">Convert your Word documents to PDF files instantly</p>
+      </div>
+        <div class="main-content">
+            <div class="card">
+                <h2 class="card-title">Convert Your Document</h2>
+                <form id="converterForm">
+                    <div class="form-group">
+                        <label for="wordFile">Select Word File</label>
+                        <input type="file" id="wordFile" accept=".docx,.doc" required>
+                        <p class="file-info" id="fileInfo">Supported formats: .docx, .doc</p>
+                    </div>
+                    <button type="submit" class="btn btn-block" id="convertBtn">Convert to PDF</button>
+                    <div class="spinner" id="spinner"></div>
+                    <div class="status" id="status"></div>
+                </form>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Privacy Guaranteed</h3>
+                    <p>Your files are processed in your browser and never uploaded to any server. Your documents stay completely private.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Fast Conversion</h3>
+                    <p>Convert Word documents to PDF in seconds with our optimized conversion process.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Works Everywhere</h3>
+                    <p>Use our converter on any device - desktop, tablet, or mobile phone.</p>
+                </div>
+            </div>
+            <div class="feature">
+               <h3 class="feature-title">How to Convert Word to PDF</h3>
+                 <p>Choose a Word file that you want to convert</p>
+                 <p>Then Click Convert Button, PDF Download Automatically on Your Device</p>
+            </div>
+        </div>
+    </div>
+<div class="external-link">
+      <h2 style="margin: 10px; width: 100%;">Blogs/Articles</h2>
+   <div class="external-links">
+  <div class="a-styles">
+  <a href="best-study-tips.html">Ultimate Study Hacks & Exam Tips for Academic Success</a>
+  </div>
+  <div class="a-styles">
+  <a href="skincare-and-haircare-routine.html">Ultimate Skincare & Haircare Routine for Healthy Skin & Hair</a>
+  </div>
+  <div class="a-styles">
+  <a href="seasonal-fashion-trends.html">Ultimate Guide to Seasonal Fashion Trends</a>
+  </div>
+  <div class="a-styles">
+  <a href="is-ai-danguros.html">Is AI Dangerous for Humanity?</a>
+  </div>
+  <div class="a-styles">
+  <a href="the-future-of-ai.html">How Artificial Intelligence Will Transform Our World Artificial Intelligence</a>
+  </div>
+  <div class="a-styles">
+  <a href="world-best-technologies.html">The World’s Best Technologies Shaping the Future</a>
+  </div>
+  <div class="a-styles">
+  <a href="deep-space-exploration.html">Deep Space Exploration: Unveiling the Mysteries of the Universe</a>
+  </div>
+  <div class="a-styles">
+  <a href="nasa-deep-space-mission.html">NASA: Pioneering the Future of Space Exploration</a>
+  </div>
+  <div class="a-styles">
+  <a href="success-of-elon-musk.html">The Extraordinary Success of Elon Musk: Visionary, Innovator, and Disruptor</a>
+  </div>
+  <div class="a-styles">
+  <a href="how-to-become-a-software-engineer.html">How to Become a Software Engineer: A Comprehensive Guide</a>
+  </div>
+  <div class="a-styles">
+  <a href="how-to-make-a-website.html">How to Make a Website: Step by Step Guide</a>
+  </div>
+  <div class="a-styles">
+  <a href="success-story-of-google.html">The Extraordinary Success Story of Google</a>
+  </div>
+  <div class="a-styles">
+  <a href="mysterious-world-of-the-deep-sea.html">The Mysterious World of the Deep Sea: Earth's Final Frontier</a>
+  </div>
+  <div class="a-styles">
+  <a href="world-top-university.html">World’s Top Universities: Excellence in Education and Research</a>
+  </div>
+  <div class="a-styles">
+  <a href="world-top-ai-tools.html">World’s Top AI Tools: The Ultimate Guide to Cutting-Edge AI</a>
+  </div>
+  <div class="a-styles">
+  <a href="easy-home-recipes.html">Easy Home Recipes: Simple & Delicious Meals for Busy Lives</a>
+  </div>
+  <div class="a-styles">
+  <a href="healthy-meal-ideas.html">Healthy Meal Ideas: Nutritious & Delicious Recipes for Every Diet</a>
+  </div>
+  <div class="a-styles">
+  <a href="motivational-stories-quotes.html">Best Motivational Stories & Life-Changing Quotes for Daily Success</a>
+  </div>
+  <div class="a-styles">
+  <a href="productivity-hacks-proven.html">10 Scientifically Proven Productivity Hacks to Boost Focus & Get More Done</a>
+  </div>
+  <div class="a-styles">
+  <a href="smartphone-laptop-reviews-2025.html">Best Smartphone & Laptop Reviews 2025 – Top Expert Picks & Buyer’s Guide</a>
+  </div>
+</div>
+</div>
+    <div class="about">
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com/share/1Kpe6MYFJT/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" width="40"></a>&nbsp;&nbsp;&nbsp;
+        <a href="https://www.instagram.com/deepanshuranjan80?igsh=dHhmOGR0cmZxaGRi"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" width="40"></a>
+    </div>
+   <footer>
+      <p>&copy; Copyright <span id="year"></span> imagestopdf.github.io</p>
+      <p>By continuing to use this site you agree to our <a href="../terms.html">Terms and Services</a> and <a href="../privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    <script src="word-to-pdf-converter.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
